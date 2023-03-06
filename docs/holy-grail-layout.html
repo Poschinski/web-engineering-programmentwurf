@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Aufgabe 8 - Holy Grail</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #e4e4e4;
+      padding: 5px;
+      height: 100vh;
+      margin: 0;
+      font: 500 100% system-ui, sans-serif;
+      text-transform: uppercase;
+    }
+
+    .page-wrap {
+      background: white;
+      height: calc(100vh - 10px);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.33);
+      display: grid;
+      grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
+      grid-template-rows: min-content min-content 1fr min-content;
+      gap: 1px;
+    }
+    .page-wrap > * {
+      padding: 1rem;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .page-wrap {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+      }
+      .page-wrap > * {
+        grid-column: 1/-1 !important;
+        grid-row: auto !important;
+      }
+    }
+
+    .page-header {
+      grid-column: 1/-1;
+      background: #ffcdd2;
+    }
+
+    .page-sidebar {
+      grid-column: 1/2;
+      grid-row: 2/4;
+      background: #e1bee7;
+    }
+
+    .page-nav {
+      grid-column: 2/3;
+      background: #bbdefb;
+    }
+
+    .page-main {
+      grid-column: 2/3;
+      background: #dcedc8;
+    }
+
+    .page-footer {
+      grid-column: 1/-1;
+      background: #ffecb3;
+    }
+
+    details p {
+      text-transform: none;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="page-header">Header</header>
+    <nav class="page-nav">Nav</nav>
+    <main class="page-main">
+      <article>
+        <details>
+          <summary>Article</summary>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Dignissimos laborum cumque incidunt, enim ipsa dicta? Porro illo
+            doloribus, consectetur eum exercitationem sit ipsam, est nesciunt
+            maxime, eius animi dolor? Harum serum.
+          </p>
+          <p>
+            Commodi culpa deserunt dolor sed, ipsam tempore ullam architecto
+            fuga voluptas, quis veniam. Vitae veniam, odit adipisci, quas
+            similique debitis excepturi quisquam minima facere temporibus, porro
+            optio perferendis iusto fuga.
+          </p>
+          <p>
+            Illo numquam, sapiente neque repellendus facere amet doloribus
+            asperiores quia eum? Sunt vero amet neque vel? Tempora, nulla
+            voluptatum amet autem culpa magnam debitis! Dolores esse quam amet
+            nobis ut.
+          </p>
+          <p>
+            Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo
+            aperiam deserunt temporibus, dolorem ex adipisci autem. Quasi, iure
+            fugiat! Nulla amet doloribus velit nam tempora, soluta consequatur
+            doloremque omnis?
+          </p>
+          <p>
+            Officia ea repellat ad, sapiente eligendi modi magni quos temporibus
+            totam culpa corporis, dignissimos quibusdam mollitia dolore eaque
+            suscipit soluta beatae ipsam! Aperiam doloremque vero soluta
+            pariatur possimus. Cupiditate, fuga.
+          </p>
+          <p>
+            Beatae deserunt veritatis magni quis quae enim ad est dignissimos
+            iste, quidem, dolores temporibus asperiores natus inventore, nobis
+            eius facere adipisci doloremque eligendi autem magnam excepturi?
+            Inventore, iusto soluta. Maiores.
+          </p>
+          <p>
+            Enim facilis aspernatur, maiores unde at inventore temporibus minima
+            possimus eveniet? Cum alias, asperiores quibusdam doloribus, vel
+            ullam qui in dicta recusandae eaque atque dolor perspiciatis
+            tenetur, fugit vero reprehenderit.
+          </p>
+          <p>
+            Reiciendis, deleniti eius nostrum fugit commodi quasi esse molestias
+            non voluptates, corrupti excepturi voluptatibus, consequatur ipsa
+            animi placeat quia corporis ut itaque quos pariatur inventore. Quasi
+            incidunt sapiente quisquam soluta?
+          </p>
+          <p>
+            Laboriosam eos atque possimus assumenda quia voluptatem saepe optio,
+            eveniet laborum. Sit esse doloremque laboriosam? Ullam inventore ut
+            facilis accusamus, ipsum, autem labore incidunt consequatur eos
+            dolorem, sit aperiam odit.
+          </p>
+          <p>
+            Consequuntur pariatur illum doloremque, necessitatibus praesentium
+            quis cumque officiis non commodi reprehenderit quaerat velit saepe
+            impedit vitae dolores, veritatis reiciendis ducimus nobis totam,
+            itaque porro temporibus excepturi error iste! Sunt.
+          </p>
+          <p>
+            Commodi culpa deserunt dolor sed, ipsam tempore ullam architecto
+            fuga voluptas, quis veniam. Vitae veniam, odit adipisci, quas
+            similique debitis excepturi quisquam minima facere temporibus, porro
+            optio perferendis iusto fuga.
+          </p>
+          <p>
+            Illo numquam, sapiente neque repellendus facere amet doloribus
+            asperiores quia eum? Sunt vero amet neque vel? Tempora, nulla
+            voluptatum amet autem culpa magnam debitis! Dolores esse quam amet
+            nobis ut.
+          </p>
+          <p>
+            Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo
+            aperiam deserunt temporibus, dolorem ex adipisci autem. Quasi, iure
+            fugiat! Nulla amet doloribus velit nam tempora, soluta consequatur
+            doloremque omnis?
+          </p>
+          <p>
+            Officia ea repellat ad, sapiente eligendi modi magni quos temporibus
+            totam culpa corporis, dignissimos quibusdam mollitia dolore eaque
+            suscipit soluta beatae ipsam! Aperiam doloremque vero soluta
+            pariatur possimus. Cupiditate, fuga.
+          </p>
+        </details>
+      </article>
+    </main>
+    <aside class="page-sidebar">Aside</aside>
+    <footer class="page-footer">Footer</footer>
+  </div>
+</body>
