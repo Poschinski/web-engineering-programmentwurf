@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/login-stylesheet.css">
+</head>
+<body>
+<div class="slider">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+</div>
+<div class="login-container">
+    <form method="post" action="/" id="ll">
+        <h1>Login</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <label for="show-password">Show Password</label>
+        <input type="checkbox" id="show-password" onclick="togglePassword()" class="show-password">
+        <button type="submit" id="login-sub">Submit</button>
+        <button type="button" onclick="" id="register-button">Register here</button>
+    </form>
+</div>
+<script src="../JS/login-js.js"></script>
+</body>
+</html>

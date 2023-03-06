@@ -1,0 +1,131 @@
+@keyframes slide {
+    0%, 28.33%, 100% {
+        transform: translateX(0);
+        animation-timing-function: ease;
+    }
+    33.3% {
+        transform: translateX(-100%);
+        animation-timing-function: step-end;
+    }
+    95% {
+        transform: translateX(100%);
+        animation-timing-function: ease;
+    }
+}
+
+.slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 16.5s infinite;
+}
+
+.slider .slide:nth-child(1) {
+    background-image: url("../Img/Ski.jpg");
+    animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+    background-image: url("../Img/Bodybuilding.jpg");
+    animation-delay: -5.5s;
+}
+
+.slider .slide:nth-child(3) {
+    background-image: url("../Img/Klettern.jpg");
+    animation-delay: -11s;
+}
+
+/*.slider .slide:nth-child(4) {*/
+/*    background-image: url("../Img/Ski.jpg");*/
+/*    animation-delay: -7s;*/
+/*}*/
+
+.login-container {
+    position: absolute;
+    width: 400px;
+    height: 480px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.show-password {
+    position: relative;
+    left: 111px;
+    bottom: 29px;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+button[type="button"] {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 35px;
+    border-radius: 5px;
+}
+
+button[type="button"]:hover {
+    background: white;
+}
