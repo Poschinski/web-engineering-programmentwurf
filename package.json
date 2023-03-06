@@ -1,0 +1,25 @@
+{
+  "name": "web-engineering-programmentwurf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poschinski/web-engineering-programmentwurf.git"
+  },
+  "author": "Tobias Schilling, Daniel Balla, Marcus Unglert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Poschinski/web-engineering-programmentwurf/issues"
+  },
+  "homepage": "https://github.com/Poschinski/web-engineering-programmentwurf#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
