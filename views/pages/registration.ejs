@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="/styles/registration.css" />
+  </head>
+  <body>
+    <div class="registration-wrapper">
+      <form
+        id="registrationForm"
+        action="/newUser"
+        method="post"
+        name="registration"
+      >
+        <h2>Registrieren</h2>
+        <div class="input-block username-wrapper">
+          <label for="username"><b>Benutzername</b></label>
+          <input
+            type="text"
+            placeholder="Benutzername eingeben"
+            name="username"
+            pattern="^[a-zA-Z-_]{1,20}$"
+            required
+          />
+        </div>
+        <div class="input-block name-wrapper">
+          <div class="double-column left givenname">
+            <label for="givenname"><b>Vorname</b></label>
+            <input
+              type="text"
+              placeholder="Vorname eingeben"
+              pattern="^[a-zA-Z-_]{1,20}$"
+              name="givenname"
+              maxlength="20"
+              required
+            />
+          </div>
+          <div class="double-column right surname">
+            <label for="surname"><b>Nachname</b></label>
+
+            <input
+              type="text"
+              placeholder="Nachname eingeben"
+              pattern="^[a-zA-Z-_]{1,20}$"
+              maxlength="20"
+              name="surname"
+              required
+            />
+          </div>
+        </div>
+        <div class="input-block password-wrapper">
+          <label for="password"><b>Passwort</b></label>
+          <input
+            type="password"
+            placeholder="Passwort eingeben"
+            name="password"
+            maxlength="20"
+            required
+          />
+        </div>
+        <div class="input-block gender-wrapper">
+          <div class="block-header">Geschlecht</div>
+          <div class="double-column left gender-male">
+
+              <label for="male"><b>Männlich</b></label>
+
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                checked
+              />
+
+          </div>
+          <div class="double-column right gender-female">
+              <label for="female"><b>Weiblich</b></label>
+            <input type="radio" id="female" name="gender" value="female" />
+          </div>
+        </div>
+        <div class="input-block">
+          <label for="interests" title="Wählen Sie Ihre Interessen"
+            ><b>Interessen</b></label
+          >
+          <select name="interests">
+            <option value="cycling">Fahrradfahren</option>
+            <option value="walk">Laufen</option>
+            <option value="swim">Schwimmen</option>
+          </select>
+        </div>
+        <div class="input-block comment-wrapper">
+          <label for="comment"><b>Kommentar (optional)</b></label>
+          <textarea
+            cols="40"
+            rows="4"
+            id="comment"
+            maxlength="100"
+            form="registrationForm"
+            name="comment"
+          >
+          </textarea>
+        </div>
+        <div class="input-block agb-wrapper">
+          <label for="agbs"><b>Nutzungsbedingungen akzeptieren.</b></label>
+          <input type="checkbox" id="agbs" required />
+        </div>
+        <div class="input-block button-wrapper">
+          <button type="submit">Registrieren</button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

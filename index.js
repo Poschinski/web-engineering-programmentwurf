@@ -6,9 +6,15 @@ const app = express();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-app.get("/", function (req, res) {
+app.use(express.static(__dirname + "/static"));
+
+app.get("/", (req, res) => {
   res.render("pages/index");
 });
+
+app.get("/registration", (req, res) => {
+  res.render("pages/registration")
+})
 
 app.post("/auth", (req, res) => {
   // Capture the input fields
