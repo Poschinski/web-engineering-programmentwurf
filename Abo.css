@@ -1,0 +1,88 @@
+body{
+    background-image: url("Hintergrund2.jpg");
+    background-attachment: fixed;
+    background-size:cover;
+    flex-wrap:wrap;
+}
+.inputcontainer{
+    
+    height:45%;
+    width:30%;
+    
+    background-size:cover;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 6px 4px 8px -2px;
+    border-style:groove;
+    border-radius:20px 20px 20px 20px;
+
+}
+input[name="name"]{
+   
+    position:absolute;
+    left:50%;
+    top:20%;
+    transform:translate(-50%,-15%);
+
+}
+input[name="firstname"]{
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform:translate(-50%, -30%);
+    
+}
+input[name="email"]{
+    position:absolute;
+    left:50%;
+    top:60%;
+    transform:translate(-50%, -45%);
+
+}
+input[name="password"]{
+    position:absolute;
+    left:50%;
+    top:80%;
+    transform:translate(-50%, -60%);
+}
+.inputcontainer .Abobutton{
+    position:absolute;
+    right:5%;
+    bottom:5%;
+    transform:translate(-5%,-5%)
+}
+.inputcontainer .AGB{
+    color:white;
+    position:absolute;
+    left:5%;
+    bottom:5%;
+    transform:translate(-5%,-5%)
+}
+input[name="name"],
+input[name="firstname"],
+input[name="email"],
+input[name="password"]{
+    background-color:transparent;
+    height:30px;
+    border-radius:10px 10px 10px 10px;
+    border-style:groove;
+    color:white;
+}
+h1{
+    text-align:center;
+    color:white;
+    font-size:x-large;
+}
+.Abobutton{
+    background-color:transparent;
+    border-radius:10px 10px 10px 10px;
+    border-style:groove;
+    color:white;
+}
+.Abobutton:hover{
+    color:black;
+    background-color:white;
+}
+
