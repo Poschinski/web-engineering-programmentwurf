@@ -1,10 +1,12 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const port = 8080;
 const app = express();
+const encodeUrl = bodyParser.urlencoded({ extended: false });
 
 // set the view engine to ejs
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + "/static"));
 
@@ -13,8 +15,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/registration", (req, res) => {
-  res.render("pages/registration")
-})
+  res.render("pages/registration");
+});
 
 app.post("/auth", (req, res) => {
   // Capture the input fields
@@ -46,7 +48,19 @@ app.post("/auth", (req, res) => {
     res.send("Please enter Username and Password!");
     res.end();
   }
-})
+});
+
+app.post("/newUser", encodeUrl, (req, res) => {
+  console.log(req.body);
+  const username = req.body.username;
+  const givenname = req.body.givenname;
+  const surname = req.body.surname;
+  const password = req.body.password;
+  const gender = req.body.gender;
+
+  res.redirect("/")
+
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
