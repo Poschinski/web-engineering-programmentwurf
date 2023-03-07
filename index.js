@@ -59,8 +59,12 @@ app.post("/newUser", encodeUrl, (req, res) => {
   const gender = req.body.gender;
 
   res.redirect("/")
-
 });
+
+
+app.get("/climbing", (req, res) => {
+  res.render("pages/climbing-overview");
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
