@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "username": "testuser",
+      "givenname": "Max",
+      "surname": "Mustermann",
+      "password": "Test1337",
+      "gender": "male"
+    },
+    {
+      "username": "poschi",
+      "givenname": "hjkl",
+      "surname": "asdf",
+      "password": "lol",
+      "gender": "male"
+    }
+  ]
+}

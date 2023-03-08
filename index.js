@@ -1,9 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const fs = require("fs");
 
 const port = 8080;
 const app = express();
 const encodeUrl = bodyParser.urlencoded({ extended: false });
+
+let users = JSON.parse(fs.readFileSync('users.json', 'utf8'));
+
+console.log(users)
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
