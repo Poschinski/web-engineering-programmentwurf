@@ -1,7 +1,7 @@
 :root{
     --background-color:white;
     
-    --accent-color:red;
+    --accent-color:#6e529d;
     --text-color:black;
     --navbar-height: 80px;
 }
@@ -61,7 +61,7 @@ nav ul a{
 }
 .dropdown{
     height:min-content;
-    width:175px;
+    width:150px;
     background: var(--backgorund-color);
     display:none;
     flex-direction:column;
@@ -99,12 +99,7 @@ nav input[type="checkbox"]{
     flex-direction:column;
     justify-content: space-between;
 }
-/* .bar{
-    height:4px;
-    width:100%;
-    background:var(--text-color);
-    border-radius:100px;
-} */
+
 @media(max-width:850px){
     .toggle_button{
         display:flex;
@@ -172,7 +167,7 @@ footer{
     border:none;
     padding:0;
     grid-column:1/-1;
-    background-image:url("Hintergrund2.jpg");
+    background-image:linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
     border-color:black;
     width:100%;
     bottom:0;
@@ -226,4 +221,4 @@ input[name="Ski"]{
 /* </style>
 
 <!-- HTML-Code für das Checkbox-Element -->
-<input type="checkbox"> */ */ */ */
+<input type="checkbox"> */ 
