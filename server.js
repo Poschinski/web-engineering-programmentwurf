@@ -22,17 +22,38 @@ app.use('/JS', express.static(path.join(__dirname, 'JS')));
 app.use('/Img', express.static(path.join(__dirname, 'Img')));
 
 
-// http://localhost:3000/
-app.get('/newUser', (req, res) => {
+// http://localhost:3000/register
+app.get('/register', (req, res) => {
     res.render("pages/registration");
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'HTML', 'login.html'));
+// http:localhost:3000/klettern
+app.get('/klettern', (req, res) => {
+    res.render("pages/climbing-overview");
 })
 
 // http://localhost:3000/auth
-app.post('/', (request, response) => {
+app.get('/auth', (req, res) => {
+    res.sendFile(path.join(__dirname, 'HTML', 'login.html'));
+})
+
+// http://localhost:3000/
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'HTML', 'Startseite.html'));
+})
+
+// http://localhost:3000/abo
+app.get('/abo', (req, res) => {
+    res.sendFile(path.join(__dirname, 'HTML', 'Abo.html'));
+})
+
+// http://localhost:3000/skifahren
+app.get('/skifahren', (req, res) => {
+    res.sendFile(path.join(__dirname, 'HTML', 'Skifahren.html'))
+})
+
+// Anmeldung
+app.post('/auth', (request, response) => {
     const data = fs.readFileSync('./users.json', {encoding: 'utf8', flag: 'r'});
 
     const username = request.body.username;
@@ -40,15 +61,16 @@ app.post('/', (request, response) => {
     const users = JSON.parse(data);
     let user = users[username];
     if (user) {
+        // Passwort validierung
         bcrypt.compare(password, user.password, function (err, result) {
             if (result) {
-                // password is valid
+                // Passwort ist valide
                 request.session.loggedin = true;
                 request.session.username = username;
                 response.redirect('/home');
             } else {
                 console.log(err);
-                alert("Falscher Benutzername und/oder Password")
+                alert("Falsches Passwort")
             }
         });
     } else {
@@ -60,7 +82,8 @@ app.post('/', (request, response) => {
 
 });
 
-app.post('/newUser', (req, res) => {
+//Registrierung
+app.post('/register', (req, res) => {
     const data = fs.readFileSync('./users.json', {encoding: 'utf8', flag: 'r'});
     const username = req.body.username;
     const givenname = req.body.givenname;
@@ -71,11 +94,14 @@ app.post('/newUser', (req, res) => {
     const abo = 1;
     const users = JSON.parse(data);
 
+    // Prüfen ob der Benutzername vorhanden ist
     if (users[username]) {
         alert("Benutzername schon vergeben");
+    // Prüfen ob das wiederholte Passwort übereinstimmt
     } else if (password !== rpassword) {
         alert("Passwörter stimmen nicht überein");
     } else {
+        // Passwort wird verschlüsselt und ein neuer user wird in der json angelegt
         bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(password, salt, function (err, hash) {
                 const newUser = {[username]: {password:hash, givenname:givenname, surname:surname, gender:gender, abo:abo}};
@@ -88,20 +114,7 @@ app.post('/newUser', (req, res) => {
     }
 })
 
-
-//localhost:3000/home
-app.get('/home', function (request, response) {
-    // If the user is loggedin
-    if (request.session.loggedin) {
-        // Output username
-        response.send('Wilkommen zurück, ' + request.session.username + '!');
-    } else {
-        // Not logged in
-        response.send('Bitte anmelden um diese Seite zu sehen!');
-    }
-    response.end();
-});
-
+// Server
 app.listen(3000, () => {
     console.log('Server running at http://localhost:3000/')
 });
