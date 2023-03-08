@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Quiz.css">
+    </head>
+    <body>
+        <nav>
+            <a class="logo" href="Startseite.html"><span>Sports</span>Pulse</a>            
+            
+            </label>
+            <ul>
+                
+               
+                
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li class="expandable_li">
+                    <input type="checkbox" id="products_checkbox">
+                    <label for="product_checkbox">News</label>
+                    <ul class="dropdown">
+                        <li><a href="Skifahren.html">Skifahren</a></li>
+                        <li><a href="#">Klettern</a></li>
+                        <li><a href="#">Bodybuilding</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <footer>
+          
+        
+            <div class="Kontakt">
+                <p>
+                    Tobias Schilling<br>
+                    schilling.tobi-it22@it-dhbw-ravensburg.de<br>
+                    Marcus Unglert<br>
+                    unglert.marcus-it22@it-dhbw-ravensburg.de<br>
+                    Daniel Balla<br>
+                    balla.daniel-it22@it.dhbw-ravensburg.de
+                </p>
+            </div>
+        </footer>
+        <h1><span>Sports</span>Quiz</h1>
+        <div class="Frage1">
+            <h2>Wo liegen die Ursprünge des heutigen Skifahrens?</h2>
+            <input type="checkbox" name="Schweden" value="Schweden" required>Schweden<br>
+            <input type="checkbox" name="Norwegen" value="Norwegen" required>Norwegen<br>
+            <input type="checkbox" name="Island" value="Island" required>Island
+        </div>
+        <div class="Frage2">
+            <h2>Was bedeutet das Wort Ski übersetzt</h2>
+            <input type="text" placeholder="Antwort" name="Ski">
+        </div>
+        <button  onclick="Ergebnis()">submit</button>
+        <script src="Quiz.js"></script>
+    </body>
+</html>

@@ -1,8 +1,22 @@
+body,html{
+    height:100%;
+    overflow:hidden;
+}
 body{
-    background-image: url("Hintergrund2.jpg");
-    background-attachment: fixed;
-    background-size:cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
     flex-wrap:wrap;
+}
+.background{
+    border: 1px solid rgba(255,255,255,.1);
+    width: 10em;
+    height: 10em;
+    transform: rotate(45deg);
+    margin: 2em;
+    float: left;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%,rgba(0,0,0,0.05) 100%);
 }
 .inputcontainer{
     
@@ -64,24 +78,35 @@ input[name="name"],
 input[name="firstname"],
 input[name="email"],
 input[name="password"]{
-    background-color:transparent;
+    background-color:white;
     height:30px;
     border-radius:10px 10px 10px 10px;
     border-style:groove;
-    color:white;
+    color:black;
+    
 }
+input[name="name"]:hover,
+input[name="firstname"]:hover,
+input[name="email"]:hover,
+input[name="password"]:hover{
+    border-color:white;
+}
+
 h1{
     text-align:center;
     color:white;
     font-size:x-large;
 }
-.Abobutton{
+.Abobutton button{
     background-color:transparent;
     border-radius:10px 10px 10px 10px;
     border-style:groove;
     color:white;
+    height:30px;
+    width:80px;
+    
 }
-.Abobutton:hover{
+.Abobutton:hover button{
     color:black;
     background-color:white;
 }
