@@ -38,8 +38,12 @@ app.get('/auth', (req, res) => {
 })
 
 // http://localhost:3000/
+app.get('/a', (req, res) => {
+    res.render("pages/Startseite");
+})
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'HTML', 'Startseite.html'));
+    res.render("pages/bodybuilding");
 })
 
 // http://localhost:3000/abo
