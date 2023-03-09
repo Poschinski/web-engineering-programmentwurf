@@ -149,15 +149,12 @@ nav input[type="checkbox"]{
 
 footer{
     position:absolute;
-    
     border:none;
-    
-    grid-column:1/-1;
     background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
     width:100%;
-    bottom:0px;
-   
-    height:160px;
+    margin-top:30px;
+    height:200px;
+
     
   }
 footer .background{
