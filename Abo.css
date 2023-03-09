@@ -33,7 +33,7 @@ body{
     border-radius:20px 20px 20px 20px;
 
 }
-input[name="name"]{
+input[name="email"]{
    
     position:absolute;
     left:50%;
@@ -41,21 +41,21 @@ input[name="name"]{
     transform:translate(-50%,-15%);
 
 }
-input[name="firstname"]{
+input[name="kreditkartennummer"]{
     position:absolute;
     left:50%;
     top:40%;
     transform:translate(-50%, -30%);
     
 }
-input[name="email"]{
+input[name="CVC"]{
     position:absolute;
     left:50%;
     top:60%;
     transform:translate(-50%, -45%);
 
 }
-input[name="password"]{
+input[name="gültig"]{
     position:absolute;
     left:50%;
     top:80%;
@@ -74,10 +74,10 @@ input[name="password"]{
     bottom:5%;
     transform:translate(-5%,-5%)
 }
-input[name="name"],
-input[name="firstname"],
 input[name="email"],
-input[name="password"]{
+input[name="kreditkartennummer"],
+input[name="CVC"],
+input[name="gültig"]{
     background-color:white;
     height:30px;
     border-radius:10px 10px 10px 10px;
@@ -85,10 +85,10 @@ input[name="password"]{
     color:black;
     
 }
-input[name="name"]:hover,
-input[name="firstname"]:hover,
 input[name="email"]:hover,
-input[name="password"]:hover{
+input[name="kreditkartennummer"]:hover,
+input[name="CVC"]:hover,
+input[name="gültig"]:hover{
     border-color:white;
 }
 

@@ -63,13 +63,37 @@
         <h1><span>Sports</span>Quiz</h1>
         <div class="Frage1">
             <h2>Wo liegen die Ursprünge des heutigen Skifahrens?</h2>
-            <input type="checkbox" name="Schweden" value="Schweden" required>Schweden<br>
-            <input type="checkbox" name="Norwegen" value="Norwegen" required>Norwegen<br>
-            <input type="checkbox" name="Island" value="Island" required>Island
+            <label class="inputcontainer">
+                <input type="checkbox" >Island
+                <span class="checkmark"></span>
+              </label>
+              <label class="inputcontainer" >Norwegen
+                <input type="checkbox">
+                <span class="checkmark right"  ></span>
+              </label>
+              <label class="inputcontainer">Schweden
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+             
+              
+            
         </div>
+        <h2>Was bedeutet das Wort Ski übersetzt</h2>
         <div class="Frage2">
-            <h2>Was bedeutet das Wort Ski übersetzt</h2>
-            <input type="text" placeholder="Antwort" name="Ski">
+            
+            <label class="inputcontainer">
+                <input type="checkbox" >Scheit
+                <span class="checkmark right" ></span>
+              </label>
+              <label class="inputcontainer">
+                <input type="checkbox" >Holzbrett
+                <span class="checkmark"  ></span>
+              </label>
+              <label class="inputcontainer" >
+                <input type="checkbox" >gespaltenes Holz
+                <span class="checkmark right" ></span>
+              </label>
         </div>
         <button  onclick="Ergebnis()">submit</button>
         <script src="Quiz.js"></script>

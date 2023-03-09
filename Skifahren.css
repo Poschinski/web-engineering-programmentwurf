@@ -1,5 +1,7 @@
 body{
     background-color:white;
+    flex-wrap:wrap;
+    flex-direction:row;
 }
   
 
@@ -69,10 +71,58 @@ h1{
 }
 .bildcontainer{
   display:flex;
-  margin-top:5%;
+  flex-wrap:wrap;
+ 
 }
 .WM{
   margin-top:5%;
 }
+h2{
+  position:flex;
+  text-align:center;
+  color:black;
+ 
+  
+  
+}
+.box1{
+  
+  
+  margin-right:10px;
+  background-color:white;
+  width:fit-content;
+  text-align:center;
+  position:flex;
+  height:fit-content;
+  margin-left:5px;
+  width:470px;
+  margin-top:50px;
+
+}
+.box2{
+  margin-right:10px;
+  background-color:white;
+  width:fit-content;
+  text-align:center;
+  position:flex;
+  height:fit-content;
+  margin-left:5px;
+  width:470px;
+  margin-top:50px;
+}
+.box3{
+  margin-right:10px;
+  background-color:white;
+  width:fit-content;
+  text-align:center;
+  position:flex;
+  height:fit-content;
+  margin-left:5px;
+  width:470px;
+  margin-top:50px;
+}
+
+
+
 
 
