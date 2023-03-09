@@ -43,19 +43,19 @@ changeColorButton.addEventListener('click', function() {
   } else {
     gespaltenesHolz.nextElementSibling.style.backgroundColor = '';
   }
-  const Datum1 = document.querySelector('#1492');
+  const Datum1 = document.querySelector('#date1');
   if (Datum1.checked) {
     Datum1.nextElementSibling.style.backgroundColor = 'red';
   } else {
     Datum1.nextElementSibling.style.backgroundColor = '';
   }
-  const Datum2 = document.querySelector('#1967');
+  const Datum2 = document.querySelector('#date2');
   if (Datum2.checked) {
     Datum2.nextElementSibling.style.backgroundColor = 'red';
   } else {
     Datum2.nextElementSibling.style.backgroundColor = '';
   }
-  const Datum3 = document.querySelector('#1850');
+  const Datum3 = document.querySelector('#date3');
   if (Datum3.checked) {
     Datum3.nextElementSibling.style.backgroundColor = 'green';
   } else {
