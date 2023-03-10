@@ -10,6 +10,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 
+app.use(require('./routes'));
 app.use(session({
     secret: 'secret',
     resave: true,
@@ -42,9 +43,6 @@ app.get('/a', (req, res) => {
     res.render("pages/Startseite");
 })
 
-app.get('/', (req, res) => {
-    res.render("pages/bodybuilding");
-})
 
 // http://localhost:3000/abo
 app.get('/abo', (req, res) => {
