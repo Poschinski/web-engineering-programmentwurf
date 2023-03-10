@@ -188,6 +188,7 @@ h1 {
     text-align: center;
     margin-top: 20px;
     font-size: 50px;
+    margin-bottom:50px;
 }
 
 /* Erstellung des Quizes(checkboxe design) */
@@ -199,6 +200,7 @@ h1 {
     cursor: pointer;
     font-size: 22px;
     user-select: none;
+   
 }
 
 .inputcontainer input {
