@@ -1,3 +1,4 @@
+/*wiederholende elemente definieren*/
 :root {
     --background-color: white;
     --accent-color: #6e529d;
@@ -19,13 +20,12 @@ head {
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Set header and footer to auto and the body to fill remaining space */
-    height: 100vh; /* Set height to the full viewport height */
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
 
 header, footer {
-    background-color: #ccc; /* Set a background color for the header and footer */
-    /*padding: 10px; !* Add some padding *!*/
+    background-color: #ccc;
 }
 
 footer {
@@ -46,14 +46,8 @@ span {
     color: red;
 }
 
+/*anordnung für den kontakt im footer*/
 footer .Kontakt {
-    /*position:absolute;*/
-    /*margin-left:10px;*/
-    /*margin-top:-130px;*/
-    /*text-align:left;*/
-    /*width:20%;*/
-    /*font-size:smaller;*/
-    /*color:white;*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -68,13 +62,7 @@ footer .Kontakt {
     color: white;
 }
 
-footer textarea {
-    /*width: 40%;*/
-    /*height: 50px;*/
-}
-
 button {
-
     margin-top: -50px;
     padding: 10px 20px;
     background-color: transparent;
@@ -91,32 +79,22 @@ form button:hover {
     color: black;
 }
 
-#comment-container {
-    display: block;
-}
-
-.comment {
-    margin-bottom: 10px;
-}
-
 form {
     margin-top: 30px;
     text-align: center;
-
-
 }
 
 main {
-    padding: 20px; /* Add some padding to the main content area */
+    padding: 20px;
 }
 
+/*styling für die navigations leiste*/
 nav {
     height: var(--navbar-height);
     background: var(--background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3;
 }
 
 nav .logo {
@@ -141,6 +119,7 @@ nav li {
     width: 150px;
     text-align: center;
     position: relative;
+    z-index: 99;
 }
 
 nav li:hover {
@@ -161,7 +140,11 @@ body > nav:nth-child(1) {
     margin-bottom: 20px;
 }
 
+.expandable_li > label {
+    margin-bottom: 0;
+}
 
+/*dropdown im nav*/
 .dropdown {
     height: min-content;
     width: 150px;
@@ -209,6 +192,8 @@ nav input[type="checkbox"] {
     justify-content: space-between;
 }
 
+/*verhalten für kleinere screens*/
+/*nac items werden in einem quadrat angeordnet*/
 @media only screen and (max-width: 768px) {
     nav li {
         width: calc(50% - 0px);
@@ -221,18 +206,4 @@ nav input[type="checkbox"] {
         justify-content: space-between;
         align-items: center;
     }
-
-    /*.dropdown {*/
-    /*    width: 100%;*/
-    /*    text-align: center;*/
-    /*}*/
-
-    /*.dropdown li {*/
-    /*    position: static;*/
-    /*    display: none;*/
-    /*}*/
-
-    /*nav li:hover .dropdown li {*/
-    /*    display: block;*/
-    /*}*/
 }

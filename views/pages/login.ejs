@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
-    <title>Login</title>
-  </head>
-  <body>
-    <div class="login-wrapper">
-      <h2>Herzlich Willkommen!</h2>
-      <form action="/auth" method="post">
-        <div class="input-block">
-          <label for="username"><b>Benutzername</b></label>
-          <input
-            type="text"
-            placeholder="Enter Username"
-            name="username"
-            required
-          />
-        </div>
-        <div class="input-block">
-          <label for="password"><b>Passwort</b></label>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="password"
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-        <p>Besitzen Sie noch kein Konto? Dann können Sie sich <a href="/registration">hier</a> ganz einfach registrieren.</p>
-      </form>
-    </div>
-  </body>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="/styles/login-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css">
+</head>
+<body>
+<header>
+  <%- include('../partials/head'); %>
+</header>
+<div class="slider">
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+</div>
+<div class="login-container">
+  <form method="post" action="/auth" id="ll">
+    <h1>Login</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <label for="show-password">Show Password</label>
+    <input type="checkbox" id="show-password" onclick="togglePassword()" class="show-password">
+    <button type="submit" id="login-sub">Submit</button>
+    <button type="button" onclick="window.location.href = '/registration'" id="register-button">Register here</button>
+  </form>
+</div>
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+<script src="/js/login-js.js"></script>
+</body>
 </html>

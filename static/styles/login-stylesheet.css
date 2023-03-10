@@ -1,3 +1,4 @@
+/*slide anordnungen*/
 @keyframes slide {
     0%, 28.33%, 100% {
         transform: translateX(0);
@@ -16,10 +17,11 @@
 .slider {
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 10vh);
     position: relative;
 }
 
+/*slide verhalten*/
 .slider .slide {
     position: absolute;
     top: 0;
@@ -31,25 +33,21 @@
     animation: slide 16.5s infinite;
 }
 
+/*slides*/
 .slider .slide:nth-child(1) {
-    background-image: url("../Img/Ski.jpg");
+    background-image: url("/img/Ski.jpg");
     animation-delay: 0s;
 }
 
 .slider .slide:nth-child(2) {
-    background-image: url("../Img/Bodybuilding.jpg");
+    background-image: url("/img/Bodybuilding.jpg");
     animation-delay: -5.5s;
 }
 
 .slider .slide:nth-child(3) {
-    background-image: url("../Img/Klettern.jpg");
+    background-image: url("/img/Klettern.jpg");
     animation-delay: -11s;
 }
-
-/*.slider .slide:nth-child(4) {*/
-/*    background-image: url("../Img/Ski.jpg");*/
-/*    animation-delay: -7s;*/
-/*}*/
 
 .login-container {
     position: absolute;
@@ -61,15 +59,15 @@
     border: 1px solid #ccc;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.6);
-    top: 10%;
+    top: 18%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .show-password {
     position: relative;
-    left: 111px;
-    bottom: 29px;
+    left: 290px;
+    bottom: 30px;
 }
 
 body {
@@ -128,4 +126,12 @@ button[type="button"] {
 
 button[type="button"]:hover {
     background: white;
+}
+
+/*verhalten bei kleineren screens*/
+@media (max-width: 768px) {
+    .slider {
+        height: calc(100vh - 20vh);
+        margin-bottom: -20vh;
+    }
 }
