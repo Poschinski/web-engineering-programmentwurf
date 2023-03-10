@@ -18,15 +18,17 @@
     </form>
   </div>
   <div class="comments-wrapper">
-    <% for( let i = 0; i < comments.length; i++ ) { %>
-      <div class="comment-info">
-        <div class="commenting-user comment-element"><%= comments[i].username %></div>
-        <div class="timestamp comment-element"><%= comments[i].timestamp %></div>
-      </div>
-      <div class="comment comment-element">
-        <%= comments[i].comment %>
-      </div>
-    <% } %>
+    <<% if (comments.lenght > 0 || !comments) { %>
+      <% for( let i = 0; i < comments.length; i++ ) { %>
+        <div class="comment-info">
+          <div class="commenting-user comment-element"><%= comments[i].username %></div>
+          <div class="timestamp comment-element"><%= comments[i].timestamp %></div>
+        </div>
+        <div class="comment comment-element">
+          <%= comments[i].comment %>
+        </div>
+      <% } %>
+    <% } %>>   
     <div class="comment-info">
       <div class="commenting-user comment-element">Marcus Unglert</div>
       <div class="timestamp comment-element">22.01.2023 17:05 Uhr</div>

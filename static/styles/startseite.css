@@ -1,0 +1,116 @@
+:root{
+    --background-color:white;
+    --accent-color: #6e529d;
+    --text-color:black;
+    --navbar-height: 80px;
+}
+
+
+head{
+    /*grid-area: header;*/
+}
+
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    /*display: grid;*/
+    /*grid-template-areas:*/
+    /*"header"*/
+    /*"body"*/
+    /*"footer";*/
+}
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+
+}
+
+
+span{
+    color:red;
+}
+
+
+ button {
+
+    margin-top:-50px;
+    padding: 10px 20px;
+    background-color:transparent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:medium;
+
+  }
+
+.buttoncontainer{
+    width:200px;
+    /*float: left;*/
+}
+
+.insta button,
+.twitter button,
+.facebook button{
+    position:relative;
+    margin-top:0px;
+    margin-left:10px;
+    margin-bottom:20px;
+    align-items:left;
+}
+.insta .instagram,
+.twitter .twitter,
+.facebook .facebook{
+    visibility:hidden;
+    width:60px;
+    color:black;
+    background-color:white;
+    text-align:center;
+
+    margin-left:0px;
+    font-size:small;
+}
+
+.insta:hover .instagram,
+.twitter:hover .twitter,
+.facebook:hover .facebook{
+    visibility:visible;
+}
+
+.insta{
+    background-image: url("../Img/instabutton.jpg");
+    background-repeat: no-repeat;
+}
+
+.twitter{
+    background-image: url("../Img/twitterlogo.png");
+    background-repeat: no-repeat;
+}
+
+.facebook{
+    background-image: url("../Img/facebook.png");
+    background-repeat: no-repeat;
+}
+
+article {
+    margin-bottom: 40vh;
+    /*float: right;*/
+}
+
+article h1{
+    font-size:x-large;
+    text-align :center;
+    margin-top:-15%;
+
+}
+article p{
+    margin-top:50px;
+    text-align:center;
+    font-size:large;
+}

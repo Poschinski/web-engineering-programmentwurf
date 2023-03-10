@@ -1,0 +1,239 @@
+:root {
+    --background-color: white;
+    --accent-color: #6e529d;
+    --text-color: black;
+    --navbar-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: v var(--text-color);
+}
+
+head {
+    margin-bottom: 10px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Set header and footer to auto and the body to fill remaining space */
+    height: 100vh; /* Set height to the full viewport height */
+}
+
+header, footer {
+    background-color: #ccc; /* Set a background color for the header and footer */
+    /*padding: 10px; !* Add some padding *!*/
+}
+
+
+footer {
+    background: linear-gradient(to bottom, #6e529d 0%, #d97b93 100%);
+}
+
+footer .background {
+    border: 1px solid rgba(255, 255, 255, .1);
+    width: 10em;
+    height: 10em;
+    transform: rotate(45deg);
+    margin: 2em;
+    float: left;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+span {
+    color: red;
+}
+
+footer .Kontakt {
+    /*position:absolute;*/
+    /*margin-left:10px;*/
+    /*margin-top:-130px;*/
+    /*text-align:left;*/
+    /*width:20%;*/
+    /*font-size:smaller;*/
+    /*color:white;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.Kontakt div {
+    text-align: center;
+}
+
+.Kontakt span {
+    font-size: 12px;
+    color: white;
+}
+
+footer textarea {
+    /*width: 40%;*/
+    /*height: 50px;*/
+}
+
+button {
+
+    margin-top: -50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+}
+
+#comment-container {
+    display: block;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 30px;
+    text-align: center;
+
+
+}
+
+main {
+    padding: 20px; /* Add some padding to the main content area */
+}
+
+nav {
+    height: var(--navbar-height);
+    background: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+nav .logo {
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+
+nav li:hover {
+    background: var(--accent-color);
+
+}
+
+nav ul a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+body > nav:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+
+.dropdown {
+    height: min-content;
+    width: 150px;
+    background: var(--background-color);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: var(--navbar-height);
+}
+
+.dropdown li {
+    height: 70px;
+    width: 100%;
+}
+
+.dropdown li a {
+    justify-content: flex-start;
+    padding-left: 20px;
+    width: calc(100% - 20px);
+}
+
+nav li:hover .dropdown {
+    display: flex;
+}
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
+.expandable_li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle_button {
+    width: 30px;
+    height: 23px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+    nav li {
+        width: calc(50% - 0px);
+        background: white;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*.dropdown {*/
+    /*    width: 100%;*/
+    /*    text-align: center;*/
+    /*}*/
+
+    /*.dropdown li {*/
+    /*    position: static;*/
+    /*    display: none;*/
+    /*}*/
+
+    /*nav li:hover .dropdown li {*/
+    /*    display: block;*/
+    /*}*/
+}

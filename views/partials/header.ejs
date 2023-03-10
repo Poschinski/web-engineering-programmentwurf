@@ -1,11 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">EJS Is Fun</a>
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="/">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/about">About</a>
-    </li>
-  </ul>
+<nav>
+    <a class="logo" href="/"><span>Sports</span>Pulse</a>
+    <ul>
+        <li><a href="/abo">Abonieren</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li class="expandable_li">
+            <input type="checkbox" id="products_checkbox">
+            <label for="products_checkbox">News</label>
+            <ul class="dropdown">
+                <li><a href="/skifahren">Skifahren</a></li>
+                <li><a href="/klettern">Klettern</a></li>
+                <li><a href="/bodybuilding">Bodybuilding</a></li>
+            </ul>
+        </li>
+
+    </ul>
 </nav>
