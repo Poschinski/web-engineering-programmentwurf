@@ -61,4 +61,22 @@ changeColorButton.addEventListener('click', function() {
   } else {
     Datum3.nextElementSibling.style.backgroundColor = '';
   }
+  const Antwort1 = document.querySelector('answer1');
+  if (Antwort1.checked) {
+    Antwort1.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    Antwort1.nextElementSibling.style.backgroundColor = '';
+  }
+  const Antwort2  = document.querySelector('#answer2');
+  if (Antwort2.checked) {
+    Antwort2.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    Antwort2.nextElementSibling.style.backgroundColor = '';
+  }
+  const Antwort3 = document.querySelector('#answer3');
+  if (Antwort3.checked) {
+    Antwort3.nextElementSibling.style.backgroundColor = 'green';
+  } else {
+    Antwort3.nextElementSibling.style.backgroundColor = '';
+  }
 });

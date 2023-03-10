@@ -1,0 +1,267 @@
+:root{
+    --background-color:white;
+    
+    --accent-color: #6e529d;
+    --text-color:black;
+    --navbar-height: 80px;
+}
+*{
+    margin:0;
+    padding:0;
+    font-size:22px;
+    font-family:'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: v
+    var(--text-color);
+}
+html{
+    height:100%;
+}
+h1{
+    font-family:'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:normal;
+}
+body{
+    height:100%;
+}
+nav{
+    height: var(--navbar-height);
+    background: var(--background-color);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+nav .logo{
+    margin-left:30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:35px;
+    font-variant: small-caps;
+    text-decoration:none;
+}
+nav ul{
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+    list-style:none;
+}
+nav li{
+    height:100%;
+    width: 150px;
+    text-align:center;
+    position:relative;
+}
+nav li:hover{
+    background:var(--accent-color);
+
+}
+nav ul a{
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+.dropdown{
+    height:min-content;
+    width:150px;
+    background: var(--backgorund-color);
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    left:0;
+    top:var(--navbar-height);
+}
+.dropdown li{
+    height:50px;
+    width:100%;
+}
+.dropdown li a{
+    justify-content: flex-start;
+    padding-left:20px;
+    width:calc(100% - 20px);
+}
+nav li:hover .dropdown{
+    display:flex;
+}
+nav input[type="checkbox"]{
+    display:none;
+}
+.expandable_li{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.toggle_button{
+    width:30px;
+    height:23px;
+    position:relative;
+    top:25px;
+    right:25px;
+    display:none;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+@media(max-width:850px){
+    .toggle_button{
+        display:flex;
+    }
+    nav ul{
+        height:min-content;
+        width:100%;
+        background:var(--background-color);
+        display:block;
+        position:relative;
+        top: var(--navbar-height);
+        
+
+    }
+    nav li{
+        height:min-content;
+        width:100%;
+        height:50%;
+    }
+    nav ul a{
+        padding:30px 0;
+        
+    }
+    .expandable_li{
+        display:block;
+    }
+    .expandable_li label{
+        padding:30px 0;
+        cursor:pointer;
+        display:block;
+        
+    }
+    #toggle_button:checked ~ ul{
+        display:block;
+    }
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    
+}  
+
+footer{
+    position:absolute;
+    border:none;
+    background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
+    width:100%;
+    margin-top:30px;
+    height:200px;
+
+    
+  }
+footer .background{
+    border: 1px solid rgba(255,255,255,.1);
+    width: 10em;
+    height: 10em;
+    transform: rotate(45deg);
+    margin: 2em;
+    float: left;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%,rgba(0,0,0,0.05) 100%);
+}
+span{
+    color:red;
+}
+footer .Kontakt p{
+    position:absolute;
+    margin-left:10px;
+    margin-top:-130px;
+    text-align:left;
+    width:20%;
+    font-size:small;
+    color:white;
+
+}
+footer textarea {
+    
+    width: 40%;
+    height: 50px;
+  }
+  
+ button {
+    
+    margin-top:-50px;
+    padding: 10px 20px;
+    background-color:transparent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:medium;
+    
+  }
+form button:hover{
+  background-color:white;
+  color:black;
+}
+#comment-container{
+  display:block;
+}
+
+.comment{
+  margin-bottom:10px;
+}
+form {
+    margin-top:30px;
+    text-align: center;
+    
+
+  }
+.buttoncontainer{
+    width:200px;
+}
+.insta button,
+.twitter button,
+.facebook button{
+    position:relative;
+    margin-top:0px;
+    margin-left:10px;
+    margin-bottom:20px;
+    align-items:left;
+   
+   
+
+}
+.insta .instagram,
+.twitter .twitter,
+.facebook .facebook{
+    visibility:hidden;
+    width:60px;
+    color:black;
+    background-color:white;
+    text-align:center;
+    
+    margin-left:0px;
+    font-size:small;
+    
+    
+
+}
+.insta:hover .instagram,
+.twitter:hover .twitter,
+.facebook:hover .facebook{
+    visibility:visible;
+}
+
+article h1{
+    font-size:x-large;
+    text-align :center;
+    margin-top:-15%;
+    
+}
+article p{
+    margin-top:50px;
+    text-align:center;
+    font-size:large;
+}
+
+
+
+
