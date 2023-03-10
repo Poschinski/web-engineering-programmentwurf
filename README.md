@@ -14,11 +14,14 @@ DHBW Web-Engineering Prüfung 1. Semester
 2. EJS: https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application
 3. Coole Checkboxen & Radiobuttons: https://codepen.io/Sambego/pen/NWaJyV
 
-### Arbeitsaufteilung
+### ToDo
 
-- Artikelübersicht -> Tobi
-- Quiz -> Tobi
-- Kommentarfunktion -> Marcus
-- Artikel -> Daniel
-- Session-Handling -> Marcus
-- Zusammenführung und Umwandlung in EJS
+- Kommentare fertig stylen und implementieren -> Marcus
+- Session fertig implementieren (Login/Logout in Nav-Bar) -> Marcus
+- Quiz fertig -> Tobi
+- Artikel -> jeder für sich
+- Artikelübersicht -> jeder für sich
+- Startseite befüllen -> Daniel
+- Kommentare verfassen (js und css) -> jeder für sich
+- Bewertungsbogen -> Tobi
+- Routes fertig machen
