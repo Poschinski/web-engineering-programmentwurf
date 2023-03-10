@@ -1,28 +1,12 @@
-:root{
-    --background-color:white;
-    --accent-color: #6e529d;
-    --text-color:black;
-    --navbar-height: 80px;
+/*:root {*/
+/*    --background-color: white;*/
+/*    --accent-color: #6e529d;*/
+/*    --text-color: black;*/
+/*}*/
+
+body {
+    background-color: #f2f2f2;
 }
-
-
-head{
-    /*grid-area: header;*/
-}
-
-html{
-    height:100%;
-}
-body{
-    height:100%;
-    /*display: grid;*/
-    /*grid-template-areas:*/
-    /*"header"*/
-    /*"body"*/
-    /*"footer";*/
-}
-
-
 
 .tooltip {
     position: relative;
@@ -31,86 +15,189 @@ body{
 
 }
 
-
-span{
-    color:red;
+span {
+    color: red;
 }
 
+button {
 
- button {
-
-    margin-top:-50px;
+    margin-top: -50px;
     padding: 10px 20px;
-    background-color:transparent;
+    background-color: transparent;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size:medium;
+    font-size: medium;
+}
 
-  }
-
-.buttoncontainer{
-    width:200px;
-    /*float: left;*/
+.buttoncontainer {
+    width: 200px;
+    position: relative;
+    top: 10vh;
+    z-index: 2;
 }
 
 .insta button,
 .twitter button,
-.facebook button{
-    position:relative;
-    margin-top:0px;
-    margin-left:10px;
-    margin-bottom:20px;
-    align-items:left;
+.facebook button {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    /*align-items: left;*/
 }
+
 .insta .instagram,
 .twitter .twitter,
-.facebook .facebook{
-    visibility:hidden;
-    width:60px;
-    color:black;
-    background-color:white;
-    text-align:center;
-
-    margin-left:0px;
-    font-size:small;
+.facebook .facebook {
+    visibility: hidden;
+    width: 60px;
+    color: black;
+    background-color: transparent;
+    text-align: center;
+    margin-left: 0px;
+    font-size: small;
 }
 
 .insta:hover .instagram,
 .twitter:hover .twitter,
-.facebook:hover .facebook{
-    visibility:visible;
+.facebook:hover .facebook {
+    visibility: hidden;
 }
 
-.insta{
+.insta {
     background-image: url("../Img/instabutton.jpg");
     background-repeat: no-repeat;
 }
 
-.twitter{
+.twitter {
     background-image: url("../Img/twitterlogo.png");
     background-repeat: no-repeat;
 }
 
-.facebook{
+.facebook {
     background-image: url("../Img/facebook.png");
     background-repeat: no-repeat;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -10vh;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white; /* set the background color of the centered div */
+    padding: 40px; /* add padding to create spacing between the content and the edge of the div */
+    max-width: 1200px; /* add max-width to limit the width of the div */
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -16vh;
+}
+
+.images h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.images a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.images img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.images p {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+/*.small-images a {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    flex-direction: column;*/
+/*    height: 200px;*/
+/*    margin-right: 10px;*/
+/*    margin-left: 10px;*/
+/*}*/
+
+/*.small-images a img {*/
+/*    object-fit: cover; !* Scale the image to cover the <img> element *!*/
+/*    height: 100%; !* Set the height of the <img> element to 100% of the <a> element *!*/
+/*    margin-right: 10px;*/
+/*}*/
+
+/*.small-images a p {*/
+/*    margin: 20px 0 0;*/
+/*}*/
+
+
+/*.small-images p {*/
+/*    font-size: 0.8rem;*/
+/*    text-align: center;*/
+/*    margin-top: 10px;*/
+/*}*/
+
 article {
     margin-bottom: 40vh;
-    /*float: right;*/
 }
 
-article h1{
-    font-size:x-large;
-    text-align :center;
-    margin-top:-15%;
+article h1 {
+    font-size: x-large;
+    text-align: center;
+}
 
+article p {
+    text-align: center;
+    font-size: large;
 }
-article p{
-    margin-top:50px;
-    text-align:center;
-    font-size:large;
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .images a {
+        margin: 5px;
+    }
+    .images img {
+        width: 200px;
+    }
+    /*.small-images a {*/
+    /*    height: auto;*/
+    /*    flex-direction: row;*/
+    /*    margin-right: 5px;*/
+    /*    margin-left: 5px;*/
+    /*}*/
+    /*.small-images a img {*/
+    /*    height: auto;*/
+    /*    width: 100%;*/
+    /*    margin-right: 5px;*/
+    /*}*/
 }
+
+
+
