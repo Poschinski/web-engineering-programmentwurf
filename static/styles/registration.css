@@ -51,7 +51,6 @@ input {
 
 label {
     width: 100%;
-    height: 17px;
 }
 
 input[type=text], input[type=password] {
@@ -70,16 +69,6 @@ select {
     height: 30px;
     margin-bottom: 12px;
     margin-top: 4px;
-}
-
-textarea {
-    width: 100%;
-    display: block;
-    height: 60px;
-    resize: none;
-    margin-top: 4px;
-    padding: 4px;
-    margin-bottom: 12px;
 }
 
 .agb-wrapper {

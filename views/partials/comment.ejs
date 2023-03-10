@@ -1,0 +1,42 @@
+<div class="comments-section-wrapper">
+  <div class="comments-heading">
+    <p><b>Wie ist Ihre Meinung zu diesem Artikel?</b></p>
+  </div>
+  <div class="comment-write-wrapper">
+    <form name="comment-form" action="/newComment" method="post">
+      <label class="comment-label" for="commentInput">Kommentar</label>
+      <textarea
+        name="commentInput"
+        title="Hinweis: Der Kommentar wird in Ihrem Namen angzeigt."
+        maxlength="1000"
+        id="commentInput"
+      ></textarea>
+      <div id="character-count">0/1000</div>
+      <div class="submit-button-wrapper">
+        <button type="submit">Kommentar veröffentlichen</button>
+      </div>
+    </form>
+  </div>
+  <div class="comments-wrapper">
+    <% for( let i = 0; i < comments.length; i++ ) { %>
+      <div class="comment-info">
+        <div class="commenting-user comment-element"><%= comments[i].username %></div>
+        <div class="timestamp comment-element"><%= comments[i].timestamp %></div>
+      </div>
+      <div class="comment comment-element">
+        <%= comments[i].comment %>
+      </div>
+    <% } %>
+    <div class="comment-info">
+      <div class="commenting-user comment-element">Marcus Unglert</div>
+      <div class="timestamp comment-element">22.01.2023 17:05 Uhr</div>
+    </div>
+    <div class="comment comment-element">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi obcaecati
+      assumenda voluptates aut sunt, blanditiis excepturi tempora consequuntur
+      repudiandae corporis reiciendis odio, inventore quas itaque quia impedit
+      aspernatur beatae aliquid?
+    </div>
+  </div>
+</div>
+<script src="/js/comments.js"></script>
