@@ -3,10 +3,7 @@ const router = express.Router();
 
 const { getUsers, writeUsers, getArticles, writeArticles } = require('./data');
 
-let articles = getArticles();
 let users = getUsers();
-
-console.log(articles)
 
 router.get('/bodybuilding/:name(entspannung|grundlagen|protein)', (req, res) => {
     let name = req.params.name
@@ -33,8 +30,9 @@ router.get('/', (req, res) => {
 })
 
 function getComments(articleName) {
+    let articles = getArticles();
     let tmpArticle = articles.find((article) => article.articleName === articleName);
-    let comments = tmpArticle.commnts
+    let comments = tmpArticle.comments
     return comments
 }
 

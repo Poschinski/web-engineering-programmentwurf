@@ -20,8 +20,8 @@
   </div>
   <div class="comments-wrapper">
     <% if (comments) { %>
-      <<% if (comments.lenght > 0) { %>
-        <% for( let i = 0; i < comments.length; i++ ) { %>
+      <% if (comments.length > 0) { %>
+        <% for( let i = 0; i < comments.length; ++i ) { %>
           <div class="comment-info">
             <div class="commenting-user comment-element"><%= comments[i].username %></div>
             <div class="timestamp comment-element"><%= comments[i].timestamp %></div>
@@ -30,18 +30,9 @@
             <%= comments[i].comment %>
           </div>
         <% } %>
-      <% } %>>  
+      <% } %>
     <% } %>
-    <div class="comment-info">
-      <div class="commenting-user comment-element">Marcus Unglert</div>
-      <div class="timestamp comment-element">22.01.2023 17:05 Uhr</div>
-    </div>
-    <div class="comment comment-element">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi obcaecati
-      assumenda voluptates aut sunt, blanditiis excepturi tempora consequuntur
-      repudiandae corporis reiciendis odio, inventore quas itaque quia impedit
-      aspernatur beatae aliquid?
-    </div>
+
   </div>
 </div>
 <script src="/js/comments.js"></script>

@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 function getUsers() {
-    let usersData = JSON.parse(fs.readFileSync("users.json", "utf8"));
+    let usersData = JSON.parse(fs.readFileSync("data/users.json", "utf8"));
     let users = usersData["users"];
     return users
 }
@@ -14,14 +14,16 @@ function writeUsers(data) {
 }
 
 function getArticles() {
-    let articlesData = JSON.parse(fs.readFileSync("articles.json", "utf8"));
+    let articlesData = JSON.parse(fs.readFileSync("data/articles.json", "utf8"));
     let articles = articlesData["articles"];
     return articles
 }
 
 function writeArticles(data){
-    let tmpData = "articles"[data]
-    fs.writeFileSync("articles.json", tmpData, {
+    let articlesData = JSON.parse(fs.readFileSync("data/articles.json", "utf8"));
+    articlesData["articles"] = data
+    tmpData = JSON.stringify(articlesData, null, 2)
+    fs.writeFileSync("data/articles.json", tmpData, {
         encoding: "utf8",
         flag: "w",
     });

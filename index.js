@@ -2,31 +2,26 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const session = require("express-session");
+const FileStore = require('session-file-store')(session);
 const uuid = require("uuid").v4;
 const bcrypt = require("bcrypt");
 const alert = require("alert");
 
 const { getUsers, writeUsers, getArticles, writeArticles } = require('./data');
-//const cookieParser = require("cookie-parser");
 
 const port = 8080;
 const app = express();
 const encodeUrl = bodyParser.urlencoded({ extended: false });
-const store = new session.MemoryStore();
+var fileStoreOptions = {
+  path: "./sessions",
+  retries: 3
+};
 
-let articles = getArticles();
 let users = getUsers();
-
-console.log(getArticles());
-
-// set the view engine to ejs
-app.set("view engine", "ejs");
-
-app.use(require("./routes"));
-app.use(express.static(__dirname + "/static"));
 
 app.use(
   session({
+    store: new FileStore(fileStoreOptions),
     name: "session",
     genid: (res, req) => {
       // use UUID as session IDs
@@ -35,11 +30,25 @@ app.use(
     secret: "KQILLzHjbSCoIV4khe4nlfPkd8LkO13E",
     resave: true,
     saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 30, httpOnly: true, secure: false },
+    cookie: { maxAge: 1000 * 60 * 120, httpOnly: true, secure: false },
   })
 );
 
-//app.use(cookieParser());
+app.use((req, res, next) => {
+  if (req.session.user) {
+    res.locals.authenticated = true;
+  } else {
+    res.locals.authenticated = false;
+  }
+  next();
+});
+
+// set the view engine to ejs
+app.set("view engine", "ejs");
+
+app.use(require("./routes"));
+app.use(express.static(__dirname + "/static"));
+
 
 app.post("/auth", encodeUrl, (req, res) => {
   // Capture the input fields
@@ -53,7 +62,7 @@ app.post("/auth", encodeUrl, (req, res) => {
       req.session.user = user;
       req.session.uuid = req.sessionID;
       console.log(req.session);
-      res.send(`Hello ${req.session.user.surname}`);
+      res.redirect("/")
     } else {
       console.log("access denied");
       res.redirect("/login");
@@ -73,7 +82,7 @@ app.post("/newUser", encodeUrl, (req, res) => {
 
   let user = findByUsername(username);
 
-  if (users[username]) {
+  if (user) {
     alert("Benutzername schon vergeben");
     // Prüfen ob das wiederholte Passwort übereinstimmt
   } else if (password !== rpassword) {
@@ -104,20 +113,19 @@ app.post("/newUser", encodeUrl, (req, res) => {
 });
 
 app.post("/newComment", encodeUrl, (req, res) => {
+  let articles = getArticles();
+  let url = req.body.url;
   if (req.session.user) {
-    console.log(req.session.user);
-    let url = req.body.url
     let articleName = url.split("/").pop();
     let comment = req.body.commentInput;
     let timestamp = generateTimestamp();
     let article = articles.find((article) => article.articleName === articleName);
-    article.comments.push({
+    article.comments.unshift({
       username: req.session.user.username,
       timestamp: timestamp,
       comment: comment,
     });
-    let data = JSON.stringify(articles, null, 2);
-    writeArticles(data)
+    writeArticles(articles)
     res.redirect(url);
   } else {
     res.redirect(url)
@@ -125,10 +133,20 @@ app.post("/newComment", encodeUrl, (req, res) => {
   }
 });
 
-app.get("/climbing/article", (req, res) => {
-  const comments = articles[0]["comments"];
-  res.render("pages/climbing-article", { comments: comments });
-});
+app.get("/logout", (req, res) => {
+  if (req.session) {
+    res.status(200).clearCookie("session")
+    req.session.destroy(err => {
+      if (err) {
+        res.status(400).send('Fehler beim abmelden.')
+      } else {
+        res.redirect("/")
+      }
+    });
+  } else {
+    res.end()
+  }
+})
 
 function findByUsername(username) {
   let user = users.find((user) => user.username === username);

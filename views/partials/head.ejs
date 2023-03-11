@@ -13,6 +13,10 @@
                 <li><a href="/bodybuilding">Bodybuilding</a></li>
             </ul>
         </li>
-        <li><a href="/">Anmelden</a></li>
+          <% if (authenticated) { %>
+            <li><a href="/logout">Abmelden</a></li>
+          <% } else{ %>  
+            <li><a href="/login">Anmelden</a></li>
+         <% } %>
     </ul>
 </nav>
