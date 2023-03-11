@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <link rel="stylesheet" type="text/css" href="/styles/Quiz.css">
         <link rel="stylesheet" type="text/css" href="/styles/partialStyle.css">
+        
         <%- include('../partials/head'); %>
 
     </head>
@@ -60,20 +61,23 @@
                 <span class="checkmark" ></span>
               </label>
         </div>
+        
+         
+        <h2>Wie viele Proteine sollte man jeden Tag zu sich nehmen?</h2>
         <div class="Frage4">
-          <h2>Wie viele Proteine sollte man jeden Tag zu sich nehmen?</h2>
-          <label class="inputcontainer">
-              <input type="checkbox" id="answer1">1.5 bis 2kg
-              <span class="checkmark"></span>
-            </label>
+            
             <label class="inputcontainer">
-              <input type="checkbox" id="answer2">5g
-              <span class="checkmark"></span>
-            </label>
-            <label class="inputcontainer" >
-              <input type="checkbox" id="answer3">1.5 bis 2g
-              <span class="checkmark"></span>
-            </label>
+                <input type="checkbox" id="antwort1" >1,5 bis 2kg
+                <span class="checkmark" ></span>
+              </label>
+              <label class="inputcontainer">
+                <input type="checkbox" id="antwort2">5g
+                <span class="checkmark"  ></span>
+              </label>
+              <label class="inputcontainer" >
+                <input type="checkbox" id="antwort3" >1,5 bis 2g
+                <span class="checkmark" ></span>
+              </label>
         </div>
         
         <div class="Frage5">
@@ -117,8 +121,8 @@
         <button id="change-color-button">submit</button>
         
         <script src="./js/quiz.js"></script>
-        <footer>
-          <%- include('../partials/footer'); %>
-        </footer>
+        
+        <%- include('../partials/footer'); %>
+        
     </body>
 </html>
