@@ -7,7 +7,10 @@ function getUsers() {
 }
 
 function writeUsers(data) {
-    fs.writeFileSync("users.json", data, {
+    let usersData = JSON.parse(fs.readFileSync("data/users.json", "utf8"));
+    usersData["users"] = data;
+    tmpData = JSON.stringify(usersData, null, 2);
+    fs.writeFileSync("data/users.json", tmpData, {
         encoding: "utf8",
         flag: "w",
     });
@@ -21,8 +24,8 @@ function getArticles() {
 
 function writeArticles(data){
     let articlesData = JSON.parse(fs.readFileSync("data/articles.json", "utf8"));
-    articlesData["articles"] = data
-    tmpData = JSON.stringify(articlesData, null, 2)
+    articlesData["articles"] = data;
+    tmpData = JSON.stringify(articlesData, null, 2);
     fs.writeFileSync("data/articles.json", tmpData, {
         encoding: "utf8",
         flag: "w",

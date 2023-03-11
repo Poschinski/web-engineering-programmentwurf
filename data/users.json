@@ -1,17 +1,10 @@
 {
   "users": [
     {
-      "username": "testuser",
-      "givenname": "Max",
-      "surname": "Mustermann",
-      "password": "Test1337",
-      "gender": "male"
-    },
-    {
-      "username": "poschi",
-      "givenname": "hjkl",
-      "surname": "asdf",
-      "password": "lol",
+      "username": "poschinski",
+      "givenname": "Marcus",
+      "surname": "Unglert",
+      "password": "$2b$10$N19LJoFctMD.LLjvdTG6U./xiGEKt4/7w9ng0PXxx..mqpYtTZJZ6",
       "gender": "male"
     }
   ]
