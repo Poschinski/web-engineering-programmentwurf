@@ -104,18 +104,22 @@ app.post("/newUser", encodeUrl, (req, res) => {
 });
 
 app.post("/newComment", encodeUrl, (req, res) => {
-  console.log(req.session.user);
-  const comment = req.body.commentInput;
-  const timestamp = generateTimestamp();
-  articles[0]["comments"].push({
-    username: req.session.user.username,
-    timestamp: timestamp,
-    comment: comment,
-  });
-  const comments = articles["articles"][0]["comments"];
-  let data = JSON.stringify(articles, null, 2);
-  fs.writeFileSync("comments.json", data);
-  res.redirect("/climbing/article");
+  if (req.session.user) {
+    console.log(req.session.user);
+    const comment = req.body.commentInput;
+    const timestamp = generateTimestamp();
+    articles[0]["comments"].push({
+      username: req.session.user.username,
+      timestamp: timestamp,
+      comment: comment,
+    });
+    const comments = articles["articles"][0]["comments"];
+    let data = JSON.stringify(articles, null, 2);
+    fs.writeFileSync("comments.json", data);
+    res.redirect("/climbing/article");
+  } else {
+    alert("Sie müssen angemeldet sein, um einen Kommentar zu schreiben.")
+  }
 });
 
 app.get("/climbing/article", (req, res) => {
