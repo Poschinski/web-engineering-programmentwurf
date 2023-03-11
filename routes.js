@@ -1,25 +1,17 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
+const { getUsers, writeUsers, getArticles, writeArticles } = require('./data');
 
-const comments = [{
-    "username": "username",
-    "timestamp": "15.02.2023 16:53",
-    "comment": "Dieser Artikel hat mein Leben verändert."
-  },
-  {
-    "username": "tempUser",
-    "timestamp": "Donnerstag, 9. März 2023, 11:31",
-    "comment": "Diese Kommentarfunktion ist der shit."
-}]
+let articles = getArticles();
+let users = getUsers();
 
+console.log(articles)
 
-router.get('/bodybuilding/grundlagen', (req, res) => {
-    res.render("pages/bodybuilding-gr");
-})
-
-router.get('/bodybuilding/entspannung', (req, res) => {
-    res.render("pages/bodybuilding-ent", { comments: comments });
+router.get('/bodybuilding/:name(entspannung|grundlagen|protein)', (req, res) => {
+    let name = req.params.name
+    let comments = getComments(name)
+    res.render("pages/bodybuilding/" + name, { comments: comments });
 })
 
 router.get("/registration", (req, res) => {
@@ -40,5 +32,10 @@ router.get('/', (req, res) => {
     res.render("pages/Startseite");
 })
 
+function getComments(articleName) {
+    let tmpArticle = articles.find((article) => article.articleName === articleName);
+    let comments = tmpArticle.commnts
+    return comments
+}
 
 module.exports = router;

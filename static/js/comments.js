@@ -12,3 +12,5 @@ messageEle.addEventListener("input", function (e) {
 
   counterEle.innerHTML = `${currentLength}/${maxLength}`;
 });
+
+document.getElementById("urlInput").value = window.location.href;

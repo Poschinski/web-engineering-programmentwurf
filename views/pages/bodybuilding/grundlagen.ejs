@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>Die Grundlagen des Bodybuildings</title>
-    <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/article.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/partialsStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/article.css" />
   </head>
   <body>
     <header>
-      <%- include('../partials/head'); %>
+      <%- include('../../partials/head'); %>
     </header>
     <div class="container">
-      <img src="/Img/bodybuilding-gr.jpg" alt="Sportbild" />
+      <img src="../img/bodybuilding-gr.jpg" alt="Sportbild" />
       <h1>Die Grundlagen des Bodybuildings</h1>
       <p>
         Das Bodybuilding ist eine der bekanntesten und anspruchsvollsten
@@ -64,17 +64,18 @@
         unternehmen, um die Ziele zu erreichen, und sich an die Grundlagen zu
         halten, um eine erfolgreiche Bodybuilding-Reise zu erleben.<br />
       </p>
+      <%- include('../../partials/comment'); %>
     </div>
     <div class="small-images">
-      <a href="/bodybuilding-ent">
-        <img src="/img/whey.jpg" />
+      <a href="/bodybuilding/protein">
+        <img src="../img/whey.jpg" />
         <p>Die Rolle von Proteinen im Bodybuilding</p>
       </a>
-      <a href="/bodybuilding-gr">
-        <img src="/img/Bodybuilding-ent.jpg" />
+      <a href="/bodybuilding/entspannung">
+        <img src="../img/Bodybuilding-ent.jpg" />
         <p>Die Bedeutung von Regeneration im Bodybuilding</p>
       </a>
     </div>
-    <footer id="bottom"><%- include('../partials/footer'); %></footer>
+    <footer id="bottom"><%- include('../../partials/footer'); %></footer>
   </body>
 </html>

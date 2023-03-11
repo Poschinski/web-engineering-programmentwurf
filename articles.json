@@ -1,7 +1,7 @@
 {
   "articles": [
     {
-      "articleId": 1,
+      "articleName": "entspannung",
       "comments": [
         {
           "username": "username",
@@ -12,6 +12,20 @@
           "username": "tempUser",
           "timestamp": "Donnerstag, 9. März 2023, 11:31",
           "comment": "Diese Kommentarfunktion ist der shit."
+        }
+      ]
+    },
+    {
+      "articleName": "protein",
+      "comments": []
+    },
+    {
+      "articleName": "grundlagen",
+      "comments": [
+        {
+          "username": "username",
+          "timestamp": "15.02.2023 16:53",
+          "comment": "Dieser Artikel hat mein Leben verändert."
         }
       ]
     }

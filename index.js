@@ -5,6 +5,8 @@ const session = require("express-session");
 const uuid = require("uuid").v4;
 const bcrypt = require("bcrypt");
 const alert = require("alert");
+
+const { getUsers, writeUsers, getArticles, writeArticles } = require('./data');
 //const cookieParser = require("cookie-parser");
 
 const port = 8080;
@@ -12,12 +14,10 @@ const app = express();
 const encodeUrl = bodyParser.urlencoded({ extended: false });
 const store = new session.MemoryStore();
 
-let usersData = JSON.parse(fs.readFileSync("users.json", "utf8"));
-let users = usersData["users"];
-let articlesData = JSON.parse(fs.readFileSync("articles.json", "utf8"));
-let articles = articlesData["articles"];
+let articles = getArticles();
+let users = getUsers();
 
-console.log(articles);
+console.log(getArticles());
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
@@ -106,19 +106,22 @@ app.post("/newUser", encodeUrl, (req, res) => {
 app.post("/newComment", encodeUrl, (req, res) => {
   if (req.session.user) {
     console.log(req.session.user);
-    const comment = req.body.commentInput;
-    const timestamp = generateTimestamp();
-    articles[0]["comments"].push({
+    let url = req.body.url
+    let articleName = url.split("/").pop();
+    let comment = req.body.commentInput;
+    let timestamp = generateTimestamp();
+    let article = articles.find((article) => article.articleName === articleName);
+    article.comments.push({
       username: req.session.user.username,
       timestamp: timestamp,
       comment: comment,
     });
-    const comments = articles["articles"][0]["comments"];
     let data = JSON.stringify(articles, null, 2);
-    fs.writeFileSync("comments.json", data);
-    res.redirect("/climbing/article");
+    writeArticles(data)
+    res.redirect(url);
   } else {
-    alert("Sie müssen angemeldet sein, um einen Kommentar zu schreiben.")
+    res.redirect(url)
+    alert("Sie müssen angemeldet sein, um einen Kommentar zu schreiben.");
   }
 });
 
