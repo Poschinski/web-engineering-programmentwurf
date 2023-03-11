@@ -28,7 +28,9 @@ router.get('/klettern', (req, res) => {
 router.get('/', (req, res) => {
     res.render("pages/Startseite");
 })
-
+router.get('/quiz', (req, res) => {
+    res.render("pages/quiz");
+})
 function getComments(articleName) {
     let articles = getArticles();
     let tmpArticle = articles.find((article) => article.articleName === articleName);
