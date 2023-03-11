@@ -2,16 +2,26 @@ body {
     background-color: #f2f2f2;
 }
 
+/*style für überschriften im artikel*/
+.span1 {
+    font: bold;
+    color: black;
+    text-decoration: underline;
+    font-size: 1.0rem;
+    line-height: 1.7;
+}
+
+/*anordnung des containers schmaler als body*/
+/*balken links/rechts*/
 .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: white; /* set the background color of the centered div */
-    padding: 40px; /* add padding to create spacing between the content and the edge of the div */
-    max-width: 1200px; /* add max-width to limit the width of the div */
-    margin: 0 auto; /* center the div horizontally */
-    /*position: relative; !* add position:relative to allow positioning of pseudo-elements *!*/
+    background-color: white;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
     z-index: 1;
     border-radius: 5px;
 }
@@ -30,18 +40,8 @@ body {
     line-height: 1.3;
 }
 
-/*@media screen and (max-width: 768px) {*/
-/*    .container {*/
-/*        flex-direction: column;*/
-/*        align-items: flex-start;*/
-/*    }*/
 
-/*    .container img {*/
-/*        margin-top: 20px;*/
-/*        max-width: 100%;*/
-/*    }*/
-/*}*/
-
+/*anordnung der bilder mit weiterleitung zu nächsten artikel*/
 .small-images {
     display: flex;
     flex-direction: row;
@@ -74,8 +74,8 @@ body {
 }
 
 .small-images a img {
-    object-fit: cover; /* Scale the image to cover the <img> element */
-    height: 100%; /* Set the height of the <img> element to 100% of the <a> element */
+    object-fit: cover;
+    height: 100%;
     margin-right: 10px;
 }
 
@@ -90,6 +90,7 @@ body {
     margin-top: 10px;
 }
 
+/*automatische anpassung bei kleinerem fenster*/
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
