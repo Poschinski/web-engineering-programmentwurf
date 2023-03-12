@@ -35,6 +35,7 @@ router.get('/skifahren', (req, res) => {
     res.render("pages/ski-overview");
 })
 
+
 function getComments(articleName) {
     let articles = getArticles();
     let tmpArticle = articles.find((article) => article.articleName === articleName);

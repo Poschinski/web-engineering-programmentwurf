@@ -1,5 +1,5 @@
 body{
-    background-color:white;
+    background-color:#f2f2f2;
     flex-wrap:wrap;
     flex-direction:row;
 }
@@ -39,25 +39,7 @@ form h1{
   background-color:white;
   color:black;
 }
-.Ski article p{
-  margin:10px;
-  position:absolute;
-  text-align:center;
-  margin-left:130px;
-  margin-right:130px;
-}
-.Ski article h1{
-  margin:20px;
-  color:black;
-  text-align:center;
-}
-.Ski article h2{
-  text-align:center;
-}
-.History{
-  align-items:left;
-  margin-top:5%;
-}
+
 h1{
   text-align:center;
   font-size:xx-large;
@@ -74,9 +56,7 @@ h1{
   flex-wrap:wrap;
  
 }
-.WM{
-  margin-top:5%;
-}
+
 h2{
   position:flex;
   text-align:center;
@@ -88,7 +68,7 @@ h2{
 .box1{
   
   
-  margin-right:10px;
+  margin-right:5px;
   background-color:white;
   width:fit-content;
   text-align:center;
@@ -100,7 +80,7 @@ h2{
 
 }
 .box2{
-  margin-right:10px;
+  margin-right:5px;
   background-color:white;
   width:fit-content;
   text-align:center;
@@ -111,7 +91,7 @@ h2{
   margin-top:50px;
 }
 .box3{
-  margin-right:10px;
+  margin-right:5px;
   background-color:white;
   width:fit-content;
   text-align:center;
@@ -120,6 +100,12 @@ h2{
   margin-left:5px;
   width:470px;
   margin-top:50px;
+}
+.box1,
+.box2,
+.box3{
+  border-style:groove;
+  box-shadow:2px 3px 2px -2px;
 }
 
 
