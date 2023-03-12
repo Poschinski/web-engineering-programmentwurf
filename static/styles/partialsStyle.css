@@ -193,17 +193,31 @@ nav input[type="checkbox"] {
 }
 
 /*verhalten für kleinere screens*/
-/*nac items werden in einem quadrat angeordnet*/
+/*nav items werden unterhalb des logos positioniert*/
+/*dropdown öffnet sich unterhalb der nav items in einer reihe*/
 @media only screen and (max-width: 768px) {
-    nav li {
-        width: calc(50% - 0px);
-        background: white;
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 160px;
     }
-
+    nav .logo {
+        margin: 20px 0;
+    }
     nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         align-items: center;
     }
+
+    .dropdown {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: 100%;
+    }
 }
+
+
+
+
+
