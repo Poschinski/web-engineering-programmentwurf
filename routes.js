@@ -29,6 +29,11 @@ router.get('/', (req, res) => {
     res.render("pages/Startseite");
 })
 
+/**
+ * 
+ * @param articleName - name of the article 
+ * @returns all comments saved in the particular article
+ */
 function getComments(articleName) {
     let articles = getArticles();
     let tmpArticle = articles.find((article) => article.articleName === articleName);
