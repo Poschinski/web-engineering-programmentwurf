@@ -1,26 +1,12 @@
-:root {
-    --background-color: white;
 
-    --accent-color: #6e529d;
-    --text-color: black;
-    --navbar-height: 80px;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 22px;
-    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: v var(--text-color);
-}
+
 
 html {
     height: 100%;
 }
 
-body {
-    height:80%;
-}
+
 
 /* navigationleiste mit dropdown erstellen */
 nav {
@@ -157,32 +143,14 @@ nav input[type="checkbox"] {
     }
 }
 
-/* Erstellen des footers mit den Kontatkdaten der Präsentierenden */
-footer {
-    position: absolute;
-    background-image: linear-gradient(to bottom, #6e529d , #d97b93 );
-    height:200px;
-    width: 100%;
-    margin-top:30px;
 
-
-}
 
 span {
     color: red;
 
 }
 
-footer .Kontakt p {
-    position: relative;
-    margin-left: 10px;
 
-    text-align: left;
-    width: 20%;
-    font-size: small;
-    color: white;
-
-}
 
 h1 {
     text-align: center;

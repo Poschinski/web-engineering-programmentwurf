@@ -4,6 +4,7 @@ const changeColorButton = document.querySelector('#change-color-button');
 changeColorButton.addEventListener('click', function() {
   const islandCheckbox = document.querySelector('#island-checkbox');
   //mit der if-Funktion festlegen, wann eine checkbox beim submitten grün wird und wann sie rot wird
+  //Frage 1
   if (islandCheckbox.checked) {
     islandCheckbox.nextElementSibling.style.backgroundColor = 'red';
   } else {
@@ -23,6 +24,7 @@ changeColorButton.addEventListener('click', function() {
   } else {
     schwedenCheckbox.nextElementSibling.style.backgroundColor = '';
   }
+  //Frage 2
   const scheit =document.querySelector('#scheit')
   if (scheit.checked) {
     scheit.nextElementSibling.style.backgroundColor = 'green';
@@ -43,6 +45,7 @@ changeColorButton.addEventListener('click', function() {
   } else {
     gespaltenesHolz.nextElementSibling.style.backgroundColor = '';
   }
+  //Frage 3
   const Datum1 = document.querySelector('#date1');
   if (Datum1.checked) {
     Datum1.nextElementSibling.style.backgroundColor = 'red';
@@ -61,22 +64,73 @@ changeColorButton.addEventListener('click', function() {
   } else {
     Datum3.nextElementSibling.style.backgroundColor = '';
   }
-  const Antwort1 = document.querySelector('answer1');
+  //Frage 4
+  const Antwort1 = document.querySelector('#antwort1');
   if (Antwort1.checked) {
     Antwort1.nextElementSibling.style.backgroundColor = 'red';
   } else {
     Antwort1.nextElementSibling.style.backgroundColor = '';
   }
-  const Antwort2  = document.querySelector('#answer2');
+  const Antwort2  = document.querySelector('#antwort2');
   if (Antwort2.checked) {
     Antwort2.nextElementSibling.style.backgroundColor = 'red';
   } else {
     Antwort2.nextElementSibling.style.backgroundColor = '';
   }
-  const Antwort3 = document.querySelector('#answer3');
+  const Antwort3 = document.querySelector('#antwort3');
   if (Antwort3.checked) {
     Antwort3.nextElementSibling.style.backgroundColor = 'green';
   } else {
     Antwort3.nextElementSibling.style.backgroundColor = '';
+  }
+  //Frage 5
+  const a = document.querySelector('#a');
+  if (a.checked) {
+    a.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    a.nextElementSibling.style.backgroundColor = '';
+  }
+  const b = document.querySelector('#b');
+  if (b.checked) {
+    b.nextElementSibling.style.backgroundColor = 'green';
+  } else {
+    b.nextElementSibling.style.backgroundColor = '';
+  }
+  const c = document.querySelector('#c');
+  if (c.checked) {
+    c.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    c.nextElementSibling.style.backgroundColor = '';
+  }
+  const d = document.querySelector('#d');
+  if (d.checked) {
+    d.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    d.nextElementSibling.style.backgroundColor = '';
+  }
+  //Frage 6
+  const a2 = document.querySelector('#a2');
+  if (a2.checked) {
+    a2.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    a2.nextElementSibling.style.backgroundColor = '';
+  }
+  const b2 = document.querySelector('#b2');
+  if (b2.checked) {
+    b2.nextElementSibling.style.backgroundColor = 'green';
+  } else {
+    b2.nextElementSibling.style.backgroundColor = '';
+  }
+  const c2 = document.querySelector('#c2');
+  if (c2.checked) {
+    c2.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    c2.nextElementSibling.style.backgroundColor = '';
+  }
+  const d2 = document.querySelector('#d2');
+  if (d2.checked) {
+    d2.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    d2.nextElementSibling.style.backgroundColor = '';
   }
 });
