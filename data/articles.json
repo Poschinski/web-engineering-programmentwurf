@@ -19,6 +19,11 @@
       "articleName": "protein",
       "comments": [
         {
+          "username": "poschinski",
+          "timestamp": "Sonntag, 12. März 2023, 13:13",
+          "comment": "asfasfasfasfasf"
+        },
+        {
           "username": "bloodwrk",
           "timestamp": "Samstag, 11. März 2023, 18:12",
           "comment": "Obwohl, eig. garnicht so geil"
@@ -37,6 +42,36 @@
     },
     {
       "articleName": "grundlagen",
+      "comments": [
+        {
+          "username": "username",
+          "timestamp": "15.02.2023 16:53",
+          "comment": "Dieser Artikel hat mein Leben verändert."
+        }
+      ]
+    },
+    {
+      "articleName": "history",
+      "comments": [
+        {
+          "username": "username",
+          "timestamp": "15.02.2023 16:53",
+          "comment": "Dieser Artikel hat mein Leben verändert."
+        }
+      ]
+    },
+    {
+      "articleName": "olympia",
+      "comments": [
+        {
+          "username": "username",
+          "timestamp": "15.02.2023 16:53",
+          "comment": "Dieser Artikel hat mein Leben verändert."
+        }
+      ]
+    },
+    {
+      "articleName": "worldcup",
       "comments": [
         {
           "username": "username",

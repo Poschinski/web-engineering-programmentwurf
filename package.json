@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "nodemon index.js --ignore data/ --ignore session/",
+    "start": "nodemon index.js --ignore ./data/ --ignore ./session/",
     "live": "node index.js"
   },
   "repository": {

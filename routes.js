@@ -11,6 +11,18 @@ router.get('/bodybuilding/:name(entspannung|grundlagen|protein)', (req, res) => 
     res.render("pages/bodybuilding/" + name, { comments: comments });
 })
 
+router.get('/klettern/:name(einfuehrung|klettergebiete|varianten)', (req, res) => {
+    let name = req.params.name
+    let comments = getComments(name)
+    res.render("pages/klettern/" + name, { comments: comments });
+})
+
+router.get('/skifahren/:name(history|olympia|worldcup)', (req, res) => {
+    let name = req.params.name
+    let comments = getComments(name)
+    res.render("pages/skifahren/" + name, { comments: comments });
+})
+
 router.get("/registration", (req, res) => {
     res.render("pages/registration");
   });
@@ -26,7 +38,7 @@ router.get('/klettern', (req, res) => {
 
 // http://localhost:3000/
 router.get('/', (req, res) => {
-    res.render("pages/Startseite");
+    res.render("pages/startseite");
 })
 router.get('/quiz', (req, res) => {
     res.render("pages/quiz");
@@ -35,15 +47,11 @@ router.get('/skifahren', (req, res) => {
     res.render("pages/ski-overview");
 })
 
-<<<<<<< HEAD
-
-=======
 /**
  * 
  * @param articleName - name of the article 
  * @returns all comments saved in the particular article
  */
->>>>>>> 8eb4dd9def018c2526ecde6461843f971e7c656b
 function getComments(articleName) {
     let articles = getArticles();
     let tmpArticle = articles.find((article) => article.articleName === articleName);

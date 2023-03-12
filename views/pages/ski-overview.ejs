@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <link rel="stylesheet" href="/styles/partialsStyle">
-        <link rel="stylesheet" href="/styles/skifahren.css">
-    </head>
-    <body>
-        <%- include('../partials/head'); %>
-        
-        
-        <h1>Skisport</h1>
-        <div class="bildcontainer">
-            
-            <div class="box1">
-                
-                <button  href="/pages/skifahren/History"><img src="/img/Skifahren.jpg"></button>
-                <h2>History</h2>
-                <p>
-                    In diesem Arikel können sie etwas über die Geschichte des Skisports lernen. Dessen Ursprung, sowie die Entwicklung über viele Jahre des Skisports.
-                </p>
-                
-            </div>
-           
-            <div class="box2">
-                
-                <button type="button" href="/skifahren/olympia"><img src="/img/olympic.jpg"></button>
-                <h2>Olympia</h2>
-                <p>
-                    In diesem Artikel können sie sich über die olympischen Winterspiele informieren und etwas über die deutschen Erfolge bei dieser erfahren.
-                </p>
-            </div>
-            
-            <div class="box3">
-                
-                <button type="button" href="/pages/skifahren/worldcup"><img src="/img/WM.jpg"></button>
-                <h2>Worldcup</h2>
-                <p>
-                    in diesem Artikel geht es um die deutschen Erfolge bei Weltmeisterschaften, sowie die aktuellsten Informationen der diesjährigen Weltmeisterschaft.
-                </p>
-            </div>
-        </div>
-        <footer>
-            <%- include('../partials/footer'); %>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Skifahren Übersicht</title>
+    <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/skifahren.css" />
+  </head>
+  <body>
+    <%- include('../partials/head'); %>
+    <h1>Skisport</h1>
+    <div class="bildcontainer">
+      <div class="box1">
+        <button href="/pages/skifahren/History">
+          <img src="/img/Skifahren.jpg" />
+        </button>
+        <h2>History</h2>
+        <p>
+          In diesem Arikel können sie etwas über die Geschichte des Skisports
+          lernen. Dessen Ursprung, sowie die Entwicklung über viele Jahre des
+          Skisports.
+        </p>
+      </div>
+
+      <div class="box2">
+        <button type="button" href="/skifahren/olympia">
+          <img src="/img/olympic.jpg" />
+        </button>
+        <h2>Olympia</h2>
+        <p>
+          In diesem Artikel können sie sich über die olympischen Winterspiele
+          informieren und etwas über die deutschen Erfolge bei dieser erfahren.
+        </p>
+      </div>
+
+      <div class="box3">
+        <button type="button" href="/pages/skifahren/worldcup">
+          <img src="/img/WM.jpg" />
+        </button>
+        <h2>Worldcup</h2>
+        <p>
+          in diesem Artikel geht es um die deutschen Erfolge bei
+          Weltmeisterschaften, sowie die aktuellsten Informationen der
+          diesjährigen Weltmeisterschaft.
+        </p>
+      </div>
+    </div>
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
 </html>
