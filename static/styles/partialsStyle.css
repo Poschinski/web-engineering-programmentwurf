@@ -211,9 +211,28 @@ nav input[type="checkbox"] {
 
     .dropdown {
         justify-content: center;
-        align-items: center;
-        text-align: center;
         top: 100%;
+        flex-direction: row;
+    }
+
+    .dropdown li {
+        background: white;
+        position: relative;
+        padding: 0 27px;
+        left: 19px;
+    }
+
+    .dropdown li a {
+        position: relative;
+        right: 10px;
+    }
+
+    .dropdown > li:nth-child(3) > a:nth-child(1) {
+        right: 25px;
+    }
+
+    .dropdown > li:nth-child(3) > a:nth-child(1) {
+        right: 20px;
     }
 }
 
