@@ -59,8 +59,9 @@ input[type=text], input[type=password] {
 }
 
 input[type=radio], input[type=checkbox] {
-    margin-right: 4px;
+    margin-right: 6px;
     width: auto;
+    margin-top: 10px;
 }
 
 select {
@@ -73,6 +74,12 @@ select {
 .agb-wrapper {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+.agb-wrapper label {
+    width: auto;
 }
 
 .button-wrapper {
