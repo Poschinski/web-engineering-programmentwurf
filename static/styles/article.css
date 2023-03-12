@@ -90,6 +90,22 @@ body {
     margin-top: 10px;
 }
 
+.enumeration {
+    padding-left: 1em;
+}
+
+.list-point {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.subheading {
+    margin: 8px 0px;
+    font: bold;
+    color: black;
+    font-size: bold;
+}
+
 /*automatische anpassung bei kleinerem fenster*/
 @media screen and (max-width: 768px) {
     .container {
