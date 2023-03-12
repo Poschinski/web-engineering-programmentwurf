@@ -16,12 +16,17 @@ DHBW Web-Engineering Prüfung 1. Semester
 
 ### ToDo
 
-- Kommentare fertig stylen und implementieren -> Marcus
-- Session fertig implementieren (Login/Logout in Nav-Bar) -> Marcus
-- Quiz fertig -> Tobi
 - Artikel -> jeder für sich
 - Artikelübersicht -> jeder für sich
-- Startseite befüllen -> Daniel
 - Kommentare verfassen (js und css) -> jeder für sich
 - Bewertungsbogen -> Tobi
-- Routes fertig machen
+- Quiz css anpassen -> Tobi
+- Startseite CSS -> Daniel
+- Kommentare CSS -> Marcus
+- Artikelübersicht -> Tobi
+- Kontakt raus
+- Dokumentation schreiben:
+    - Tobi: Header, Quiz (js und css), Artikelübersicht
+    - Daniel: Artikel, login, Footer, Startseite
+    - Marcus: index.js, Kommentare, Routes, Daten (Json)
+- Präsentation -> am Tag des Geschehens

@@ -21,7 +21,7 @@ body {
     background-color: white;
     padding: 40px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 5vh auto;
     z-index: 1;
     border-radius: 5px;
 }

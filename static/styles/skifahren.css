@@ -1,84 +1,74 @@
-body{
-    background-color:#f2f2f2;
-    flex-wrap:wrap;
-    flex-direction:row;
+body {
+  background-color: #f2f2f2;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-form h1{
-  font-size:large;
-  color:white;
-  margin-top:-20px;
+form h1 {
+  font-size: large;
+  color: white;
+  margin-top: -20px;
 }
-.submit button{
-  background-color:transparent;
-  color:white;
+.submit button {
+  background-color: transparent;
+  color: white;
 }
-.submit:hover button{
-  background-color:white;
-  color:black;
-}
-
-h1{
-  text-align:center;
-  font-size:xx-large;
+.submit:hover button {
+  background-color: white;
+  color: black;
 }
 
-.bildcontainer{
-  display:flex;
-  flex-wrap:wrap;
- 
+h1 {
+  text-align: center;
+  font-size: xx-large;
 }
 
-h2{
-  position:flex;
-  text-align:center;
-  color:black;
-   
+.bildcontainer {
+  display: flex;
+  flex-wrap: wrap;
 }
-.box1{
-  
-  
-  margin-right:5px;
-  background-color:white;
-  width:fit-content;
-  text-align:center;
-  position:flex;
-  height:fit-content;
-  margin-left:5px;
-  width:470px;
-  margin-top:50px;
 
+h2 {
+  position: flex;
+  text-align: center;
+  color: black;
 }
-.box2{
-  margin-right:5px;
-  background-color:white;
-  width:fit-content;
-  text-align:center;
-  position:flex;
-  height:fit-content;
-  margin-left:5px;
-  width:470px;
-  margin-top:50px;
+.box1 {
+  margin-right: 5px;
+  background-color: white;
+  width: fit-content;
+  text-align: center;
+  position: flex;
+  height: fit-content;
+  margin-left: 5px;
+  width: 470px;
+  margin-top: 50px;
 }
-.box3{
-  margin-right:5px;
-  background-color:white;
-  width:fit-content;
-  text-align:center;
-  position:flex;
-  height:fit-content;
-  margin-left:5px;
-  width:470px;
-  margin-top:50px;
+.box2 {
+  margin-right: 5px;
+  background-color: white;
+  width: fit-content;
+  text-align: center;
+  position: flex;
+  height: fit-content;
+  margin-left: 5px;
+  width: 470px;
+  margin-top: 50px;
+}
+.box3 {
+  margin-right: 5px;
+  background-color: white;
+  width: fit-content;
+  text-align: center;
+  position: flex;
+  height: fit-content;
+  margin-left: 5px;
+  width: 470px;
+  margin-top: 50px;
 }
 .box1,
 .box2,
-.box3{
-  border-style:groove;
-  box-shadow:2px 3px 2px -2px;
+.box3 {
+  border-style: groove;
+  box-shadow: 2px 3px 2px -2px;
 }
-
-
-
-
-
