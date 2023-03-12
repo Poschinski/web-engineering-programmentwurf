@@ -2,12 +2,6 @@ body {
     background-color: #f2f2f2;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
 span {
     color: red;
 }
@@ -73,6 +67,10 @@ button {
     background-repeat: no-repeat;
 }
 
+.insta:hover, .twitter:hover, .facebook:hover {
+    transform: translate(5px);
+}
+
 /*anordnung des containers schmaler als body*/
 /*balken links/rechts*/
 .container {
@@ -86,6 +84,23 @@ button {
     max-width: 1200px;
     z-index: 1;
     border-radius: 5px;
+}
+
+article {
+    margin-bottom: 40vh;
+}
+
+article h1 {
+    font-size: x-large;
+    text-align: center;
+    line-height: 2;
+}
+
+article p {
+    text-align: center;
+    font-size: large;
+    margin-left: 9vh;
+    margin-right: 9vh;
 }
 
 .images {
@@ -128,22 +143,6 @@ button {
     transform: scale(1.1);
 }
 
-article {
-    margin-bottom: 40vh;
-}
-
-article h1 {
-    font-size: x-large;
-    text-align: center;
-    line-height: 2;
-}
-
-article p {
-    text-align: center;
-    font-size: large;
-    margin-left: 9vh;
-    margin-right: 9vh;
-}
 
 /*automatische anpassung bei kleinerem fenster*/
 @media only screen and (max-width: 768px) {
