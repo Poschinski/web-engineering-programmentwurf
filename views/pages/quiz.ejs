@@ -3,128 +3,130 @@
   <head>
     <meta charset="UTF-8">
     <title>Quiz</title>
-    <link rel="stylesheet" type="text/css" href="/styles/quiz.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Quiz.css" />
     <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css"/>
   </head>
   <body>
     <%- include('../partials/head'); %>
-
-    <h1><span>Sports</span>Quiz</h1>
-    <div class="Frage1">
+    <div class="container">
+      <h1><span>Sports</span>Quiz</h1>
       <h2>Wo liegen die Ursprünge des heutigen Skifahrens?</h2>
-      <label class="inputcontainer">
-        <input type="checkbox" id="island-checkbox" />Island
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer"
-        >Norwegen
-        <input type="checkbox" id="norwegen-checkbox" />
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer"
-        >Schweden
-        <input type="checkbox" id="schweden-checkbox" />
-        <span class="checkmark"></span>
-      </label>
-    </div>
-
-    <div class="Frage2">
+      <div class="Frage1">
+        
+        <label class="inputcontainer">
+          <input type="checkbox" id="island-checkbox" />Island
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer"
+          >Norwegen
+          <input type="checkbox" id="norwegen-checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer"
+          >Schweden
+          <input type="checkbox" id="schweden-checkbox" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
       <h2>Was bedeutet das Wort Ski übersetzt (zwei Antworten)</h2>
+      <div class="Frage2">
 
-      <label class="inputcontainer">
-        <input type="checkbox" id="scheit" />Scheit
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="holzbrett" />Holzbrett
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="gespalten" />gespaltenes Holz
-        <span class="checkmark"></span>
-      </label>
-    </div>
-    <h2>Wann waren die ersten Rennen der Skigeschichte?</h2>
-    <div class="Frage3">
-      <label class="inputcontainer">
-        <input type="checkbox" id="date1" />1492
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="date2" />1967
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="date3" />1850
-        <span class="checkmark"></span>
-      </label>
-    </div>
+        <label class="inputcontainer">
+          <input type="checkbox" id="scheit" />Scheit
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="holzbrett" />Holzbrett
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="gespalten" />gespaltenes Holz
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <h2>Wann waren die ersten Rennen der Skigeschichte?</h2>
+      <div class="Frage3">
+        <label class="inputcontainer">
+          <input type="checkbox" id="date1" />1492
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="date2" />1967
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="date3" />1850
+          <span class="checkmark"></span>
+        </label>
+      </div>
 
-    <h2>Wie viele Proteine sollte man jeden Tag zu sich nehmen?</h2>
-    <div class="Frage4">
-      <label class="inputcontainer">
-        <input type="checkbox" id="antwort1" />1,5 bis 2kg
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="antwort2" />5g
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="antwort3" />1,5 bis 2g
-        <span class="checkmark"></span>
-      </label>
-    </div>
-
-    <div class="Frage5">
+      <h2>Wie viele Proteine sollte man jeden Tag zu sich nehmen?</h2>
+      <div class="Frage4">
+        <label class="inputcontainer">
+          <input type="checkbox" id="antwort1" />1,5 bis 2kg
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="antwort2" />5g
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="antwort3" />1,5 bis 2g
+          <span class="checkmark"></span>
+        </label>
+      </div>
       <h2>
         Welche beiden Arten von Krafttraining werden im Bodybuilding bevorzugt?
       </h2>
-      <label class="inputcontainer">
-        <input type="checkbox" id="a" />Ausdauertraining und
-        Maximalkrafttraining
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="b" />Maximalkrafttraining und
-        Hypertrophietraining
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="c" />Hypertrophietraining und
-        Ausdauertraining
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="d" />Leichathletiktraining und
-        Hypertrophietraining
-        <span class="checkmark"></span>
-      </label>
-    </div>
-    <div class="Frage6">
+      <div class="Frage5">
+        
+        <label class="inputcontainer">
+          <input type="checkbox" id="a" />Ausdauertraining und
+          Maximalkrafttraining
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="b" />Maximalkrafttraining und
+          Hypertrophietraining
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="c" />Hypertrophietraining und
+          Ausdauertraining
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="d" />Leichathletiktraining und
+          Hypertrophietraining
+          <span class="checkmark"></span>
+        </label>
+      </div>
       <h2>Welche Rolle spielt Disziplin im Bodybuilding</h2>
-      <label class="inputcontainer">
-        <input type="checkbox" id="a2" />Disziplin ist nicht wichtig im
-        Bodybuilding
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="b2" />Disziplin hilft dabei, den Fokus auf
-        die Ziele zu behalten
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="c2" />Disziplin ist nur wichtig für Anfänger
-        im Bodybuilding
-        <span class="checkmark"></span>
-      </label>
-      <label class="inputcontainer">
-        <input type="checkbox" id="d2" />Disziplin ist nur wichtig für
-        fortgeschrittene im Bodybuilding
-        <span class="checkmark"></span>
-      </label>
+      <div class="Frage6">
+        
+        <label class="inputcontainer">
+          <input type="checkbox" id="a2" />Disziplin ist nicht wichtig im
+          Bodybuilding
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="b2" />Disziplin hilft dabei, den Fokus auf
+          die Ziele zu behalten
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="c2" />Disziplin ist nur wichtig für Anfänger
+          im Bodybuilding
+          <span class="checkmark"></span>
+        </label>
+        <label class="inputcontainer">
+          <input type="checkbox" id="d2" />Disziplin ist nur wichtig für
+          fortgeschrittene im Bodybuilding
+          <span class="checkmark"></span>
+        </label>
+      </div><br><br>
+      <button id="change-color-button">submit</button>
     </div>
-    <button id="change-color-button">submit</button>
 
     <script src="./js/quiz.js"></script>
 

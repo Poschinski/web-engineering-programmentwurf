@@ -1,8 +1,13 @@
+body{
+    background-color: #f2f2f2;
+}
+html {
+    height: 100%;
+}
 span {
     color: red;
 
 }
-
 h1 {
     text-align: center;
     margin-top: 20px;
@@ -16,16 +21,13 @@ h1 {
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
-    cursor: pointer;
     font-size: 22px;
-    user-select: none;
+   
    
 }
 
 .inputcontainer input {
-    position: absolute;
     opacity: 0;
-    cursor: pointer;
     height: 0;
     width: 0;
 }
@@ -39,9 +41,11 @@ h1 {
     background-color: #eee;
 }
 
+
 .inputcontainer:hover input~.checkmark {
     background-color: #ccc;
 }
+
 
 .checkmark:after {
     content: "";
@@ -49,9 +53,11 @@ h1 {
     display: none;
 }
 
+
 .inputcontainer input:checked~.checkmark:after {
     display: block;
 }
+
 
 .inputcontainer .checkmark:after {
     left: 9px;
@@ -73,19 +79,43 @@ input[type=checkbox]:checked+.checkmark {
 }
 
 /* Button für die Überprüfung, ob die angebenen Antworten stimmen oder nicht */
-button {
+#change-color-button {
     text-align: center;
     border-radius: 10px 10px 10px 10px;
+    border-style:groove;
     border-color: #6e529d;
     background-color: white;
     color: #6e529d;
     width: 100px;
     height: 50px;
-    margin-left: 450px;
+    margin-left: 800px;
+   
+   
 
 }
 
-button:hover {
+#change-color-button:hover {
     color: white;
     background-color: #6e529d;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 5vh auto;
+    z-index: 1;
+    border-radius: 5px;
+}
+.Frage1,
+.Frage2,
+.Frage3,
+.Frage4,
+.Frage5,
+.Frage6{
+    margin-left:50px;
+   
+}
+
