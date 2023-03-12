@@ -1,9 +1,9 @@
 <div class="comments-section-wrapper">
   <div class="comments-heading">
-    <p><b>Wie ist Ihre Meinung zu diesem Artikel?</b></p>
+    <p><b>Was ist Ihre Meinung zu diesem Artikel?</b></p>
   </div>
   <div class="comment-write-wrapper">
-    <form name="comment-form" action="/newComment" method="post">
+    <form name="comment-form" action="/newComment" method="post" class="comment-form">
       <label class="comment-label" for="commentInput">Kommentar</label>
       <textarea
         name="commentInput"
@@ -14,7 +14,7 @@
       <input type="hidden" name="url" id="urlInput">
       <div id="character-count">0/1000</div>
       <div class="submit-button-wrapper">
-        <button type="submit">Kommentar veröffentlichen</button>
+        <button type="submit" class="comment-button">Kommentar veröffentlichen</button>
       </div>
     </form>
   </div>

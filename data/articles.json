@@ -22,21 +22,6 @@
           "username": "poschinski",
           "timestamp": "Sonntag, 12. März 2023, 13:13",
           "comment": "asfasfasfasfasf"
-        },
-        {
-          "username": "bloodwrk",
-          "timestamp": "Samstag, 11. März 2023, 18:12",
-          "comment": "Obwohl, eig. garnicht so geil"
-        },
-        {
-          "username": "bloodwrk",
-          "timestamp": "Samstag, 11. März 2023, 18:12",
-          "comment": "Junge isch der Artikel geil."
-        },
-        {
-          "username": "poschi",
-          "timestamp": "Samstag, 11. März 2023, 16:04",
-          "comment": "ASDFSDFSDF"
         }
       ]
     },
@@ -72,6 +57,36 @@
     },
     {
       "articleName": "worldcup",
+      "comments": [
+        {
+          "username": "username",
+          "timestamp": "15.02.2023 16:53",
+          "comment": "Dieser Artikel hat mein Leben verändert."
+        }
+      ]
+    },
+    {
+      "articleName": "einfuehrung",
+      "comments": [
+        {
+          "username": "poschinski",
+          "timestamp": "Sonntag, 12. März 2023, 17:56",
+          "comment": "Helo"
+        }
+      ]
+    },
+    {
+      "articleName": "klettergebiete",
+      "comments": [
+        {
+          "username": "username",
+          "timestamp": "15.02.2023 16:53",
+          "comment": "Dieser Artikel hat mein Leben verändert."
+        }
+      ]
+    },
+    {
+      "articleName": "varianten",
       "comments": [
         {
           "username": "username",
