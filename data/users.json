@@ -6,6 +6,13 @@
       "surname": "Unglert",
       "password": "$2b$10$N19LJoFctMD.LLjvdTG6U./xiGEKt4/7w9ng0PXxx..mqpYtTZJZ6",
       "gender": "male"
+    },
+    {
+      "username": "bloodwrk",
+      "givenname": "Steeeven",
+      "surname": "Richter",
+      "password": "$2b$10$fgTWUrAolANZeWvpaQcjreG9NeulXwyUbMiWrHgTNsTQcgyt8bJu2",
+      "gender": "male"
     }
   ]
 }

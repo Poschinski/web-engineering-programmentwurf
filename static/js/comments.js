@@ -1,6 +1,9 @@
 const messageEle = document.getElementById("commentInput");
 const counterEle = document.getElementById("character-count");
 
+/**
+ * event listener to count the number of characters in the textarea
+ */
 messageEle.addEventListener("input", function (e) {
   const target = e.target;
 

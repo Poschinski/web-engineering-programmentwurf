@@ -35,7 +35,15 @@ router.get('/skifahren', (req, res) => {
     res.render("pages/ski-overview");
 })
 
+<<<<<<< HEAD
 
+=======
+/**
+ * 
+ * @param articleName - name of the article 
+ * @returns all comments saved in the particular article
+ */
+>>>>>>> 8eb4dd9def018c2526ecde6461843f971e7c656b
 function getComments(articleName) {
     let articles = getArticles();
     let tmpArticle = articles.find((article) => article.articleName === articleName);

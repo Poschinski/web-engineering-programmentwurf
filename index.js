@@ -16,8 +16,10 @@ const fileStoreOptions = {
   retries: 3,
 };
 
+// get users from json
 let users = getUsers();
 
+// middleware for creating and storing a user session
 app.use(
   session({
     store: new FileStore(fileStoreOptions),
@@ -29,10 +31,12 @@ app.use(
     secret: "KQILLzHjbSCoIV4khe4nlfPkd8LkO13E",
     resave: true,
     saveUninitialized: false,
+    // max age formula is milliseconds * seconds * minutes
     cookie: { maxAge: 1000 * 60 * 120, httpOnly: true, secure: false },
   })
 );
 
+// middleware to check if user is authenticated
 app.use((req, res, next) => {
   if (req.session.user) {
     res.locals.authenticated = true;
@@ -49,12 +53,13 @@ app.use(require("./routes"));
 app.use(express.static(__dirname + "/static"));
 
 app.post("/auth", encodeUrl, (req, res) => {
-  // Capture the input fields
+  // capture the input fields
   let username = req.body.username;
   let password = req.body.password;
   // Ensure the input fields exists and are not empty
   let user = users.find((user) => user.username === username);
   if (user) {
+    // hash the given password and compare it too hashed password in json
     bcrypt.compare(password, user.password, function (err, result) {
       if (result) {
         req.session.user = user;
@@ -67,7 +72,7 @@ app.post("/auth", encodeUrl, (req, res) => {
       }
     });
   } else {
-    alert("Falscher Benutzername!")
+    alert("Benutzername konnte nicht gefunden werden!")
     res.redirect("/login");
   }
 });
@@ -80,15 +85,15 @@ app.post("/newUser", encodeUrl, (req, res) => {
   const rpassword = req.body.passwordConfirm;
   const gender = req.body.gender;
 
-  // prüfe, ob der Benuter bereits existiert
+  // check if the user already exists
   let user = findByUsername(username);
   if (user) {
     alert("Benutzername bereits vergeben!");
-    // Prüfen ob das wiederholte Passwort übereinstimmt
+    // check if the repeated password matches
   } else if (password !== rpassword) {
     alert("Passwörter stimmen nicht überein");
   } else {
-    // Passwort wird verschlüsselt und ein neuer user wird in der json angelegt
+    // Password is hashed and a new user is created in the json
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(password, salt, function (err, hash) {
         const newUser = {
@@ -107,8 +112,11 @@ app.post("/newUser", encodeUrl, (req, res) => {
 });
 
 app.post("/newComment", encodeUrl, (req, res) => {
+  // get current articles
   let articles = getArticles();
+  // get url from where the form was sent from
   let url = req.body.url;
+  // check if user session exists
   if (req.session.user) {
     let articleName = url.split("/").pop();
     let comment = req.body.commentInput;
@@ -131,7 +139,9 @@ app.post("/newComment", encodeUrl, (req, res) => {
 
 app.get("/logout", (req, res) => {
   if (req.session) {
+    // delete the cookie
     res.status(200).clearCookie("session");
+    // delete the session
     req.session.destroy((err) => {
       if (err) {
         res.status(400).send("Fehler beim abmelden.");
@@ -144,11 +154,20 @@ app.get("/logout", (req, res) => {
   }
 });
 
+/**
+ * 
+ * @param username - username to search for
+ * @returns the entire user object
+ */
 function findByUsername(username) {
   let user = users.find((user) => user.username === username);
   return user;
 }
 
+/**
+ * 
+ * @returns the current date and time in german format
+ */
 function generateTimestamp() {
   let date = new Date();
   let options = {
