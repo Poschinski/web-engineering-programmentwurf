@@ -16,18 +16,19 @@
         name="registration"
       >
         <h2>Registrieren</h2>
-        <div class="input-block username-wrapper">
+        <div class="input-block">
           <label for="username"><b>Benutzername</b></label>
           <input
             type="text"
             placeholder="Benutzername eingeben"
             name="username"
             pattern="^[a-zA-Z-_]{1,20}$"
+            maxlength="20"
             required
           />
         </div>
-        <div class="input-block name-wrapper">
-          <div class="double-column left givenname">
+        <div class="input-block">
+          <div class="double-column givenname">
             <label for="givenname"><b>Vorname</b></label>
             <input
               type="text"
@@ -38,7 +39,7 @@
               required
             />
           </div>
-          <div class="double-column right surname">
+          <div class="double-column">
             <label for="surname"><b>Nachname</b></label>
             <input
               type="text"
@@ -50,7 +51,7 @@
             />
           </div>
         </div>
-        <div class="input-block password-wrapper">
+        <div class="input-block">
           <label for="password"><b>Passwort</b></label>
           <input
             type="password"
@@ -59,8 +60,7 @@
             maxlength="20"
             required
           />
-        </div>
-          <div class="input-block password-confirm-wrapper">
+        <div class="input-block">
           <label for="passwordConfirm"><b>Passwort wiederholen</b></label>
           <input
             type="password"
@@ -70,13 +70,13 @@
             required
           />
         </div>
-        <div class="input-block gender-wrapper">
+        <div class="input-block">
           <div class="block-header">Geschlecht</div>
           <div class="double-column left gender-male">
             <label for="male"><b>Männlich</b></label>
             <input type="radio" id="male" name="gender" value="male" checked />
           </div>
-          <div class="double-column right gender-female">
+          <div class="double-column">
             <label for="female"><b>Weiblich</b></label>
             <input type="radio" id="female" name="gender" value="female" />
           </div>
@@ -90,6 +90,5 @@
         </div>
       </form>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
