@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <%- include('../partials/head'); %>
-    <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/article-overview.css" />
-  </head>
-  <body>
-    <main class="content-wrapper">
-      <div class="article-wrapper">
-        <div class="article-header">
-          <h2>Free Climbing</h2>
-        </div>
-        <img alt="Bild von einem Free-Climber an einer hohen Felswand." />
-        <div class="article-teaser">
-          <b>Was ist Free Climbing?</b> Free Climbing ist eine Form des Kletterns, bei
-          der der Kletterer nur seine Hände, Füße und seinen Körper benutzt, um
-          Fortschritte zu machen und sich in der vertikalen Welt zu halten. Free
-          Climbing wird sowohl mit als auch ohne Seil durchgeführt, obwohl die
-          meisten Kletterer ein Seil zur persönlichen Sicherheit verwenden und
-          um die schwerwiegenden und tödlichen Auswirkungen der Schwerkraft zu
-          vermeiden.
-        </div>
-        <div class="article-header">
-          <h2>Bouldern</h2>
-        </div>
-        <img alt="Bild von einem Free-Climber an einer hohen Felswand." />
-        <div class="article-teaser">
-          <b>Was ist Free Climbing?</b> Free Climbing ist eine Form des Kletterns, bei
-          der der Kletterer nur seine Hände, Füße und seinen Körper benutzt, um
-          Fortschritte zu machen und sich in der vertikalen Welt zu halten. Free
-          Climbing wird sowohl mit als auch ohne Seil durchgeführt, obwohl die
-          meisten Kletterer ein Seil zur persönlichen Sicherheit verwenden und
-          um die schwerwiegenden und tödlichen Auswirkungen der Schwerkraft zu
-          vermeiden.
-        </div>
-        <div class="article-header">
-          <h2>Kletterausrüstung</h2>
-        </div>
-        <img alt="Bild von einem Free-Climber an einer hohen Felswand." />
-        <div class="article-teaser">
-          <b>Was ist Free Climbing?</b> Free Climbing ist eine Form des Kletterns, bei
-          der der Kletterer nur seine Hände, Füße und seinen Körper benutzt, um
-          Fortschritte zu machen und sich in der vertikalen Welt zu halten. Free
-          Climbing wird sowohl mit als auch ohne Seil durchgeführt, obwohl die
-          meisten Kletterer ein Seil zur persönlichen Sicherheit verwenden und
-          um die schwerwiegenden und tödlichen Auswirkungen der Schwerkraft zu
-          vermeiden.
-        </div>
-      </div>
-    </main>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/article-overview.css"/>
+</head>
+<body>
+<%- include('../partials/head'); %>
+<div class="container">
+    <h1>Klettern</h1>
+    <div class="box1">
+        <a href="/klettern/einfuehrung">
+            <img src="/img/climbing_intro.jpg"></button>
+        </a>
+        <h2>Tipps und Tricks für Kletteranfänger</h2>
+        <p>
+          Klettern ist eine spannende und vielseitige Sportart, die sowohl
+          körperliche als auch geistige Fähigkeiten fordert und fördert. Ob in der
+          Halle oder am Fels, ob allein oder mit Freunden, ob als Hobby oder als
+          Leidenschaft - Klettern bietet für jeden etwas. Doch wie fängt man am
+          besten an?
+        </p>
+    </div>
+    <div class="box2">
+        <a href="/klettern/varianten">
+            <img src="/img/climbing_variants.jpg"></button>
+        </a>
+        <h2>Varianten von Klettern als Sportart</h2>
+        <p>
+          Klettern ist eine vielseitige Sportart, die verschiedene Formen und
+          Stile umfasst. Je nachdem, wo, wie und mit wem man klettert, kann man
+          unterschiedliche Herausforderungen und Erlebnisse haben. In diesem
+          Artikel werden einige der Varianten von Klettern als Sportart
+          vorgestellt.
+        </p>
+    </div>
+    <div class="box3">
+        <a href="/klettern/klettergebiete">
+            <img src="/img/climbing_area.jpg"></button>
+        </a>
+        <h2>Bekannte Klettergebiete in Deutschland oder Europa</h2>
+        <p>
+          Deutschland und Europa bieten eine Vielzahl von Klettergebieten und
+          -routen für jeden Geschmack und jedes Niveau. Ob man lieber an Fels oder
+          an Sandstein klettert, ob man kurze oder lange Routen bevorzugt, ob man
+          sportlich oder alpin unterwegs ist - hier findet man garantiert etwas
+          Passendes.
+        </p>
+    </div>
+</div>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</body>
 </html>

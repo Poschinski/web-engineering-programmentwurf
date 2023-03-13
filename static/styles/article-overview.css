@@ -10,7 +10,7 @@ body {
     z-index: 1;
     border-radius: 5px;
     grid-template-areas:
-    ".  h1 ."
+    ".  h1 . "
     "b1 b2 b3";
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -18,10 +18,11 @@ body {
 h1 {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     font-size: 40px;
     position: relative;
-    left: 36vh;
+    grid-area: h1;
+    /* left: 36vh; */
 }
 
 .box1 {

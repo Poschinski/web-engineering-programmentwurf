@@ -5,6 +5,7 @@ const FileStore = require("session-file-store")(session);
 const uuid = require("uuid").v4;
 const bcrypt = require("bcrypt");
 const alert = require("alert");
+const favicon = require("express-favicon");
 
 const { getUsers, writeUsers, getArticles, writeArticles } = require("./data");
 
@@ -45,6 +46,9 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+// middleware to display the favicon
+app.use(favicon(__dirname + "/static/img/favicon.ico"));
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
