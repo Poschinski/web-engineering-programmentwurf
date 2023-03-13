@@ -2,26 +2,15 @@
   "articles": [
     {
       "articleName": "entspannung",
-      "comments": [
-        {
-          "username": "username",
-          "timestamp": "15.02.2023 16:53",
-          "comment": "Dieser Artikel hat mein Leben verändert."
-        },
-        {
-          "username": "tempUser",
-          "timestamp": "Donnerstag, 9. März 2023, 11:31",
-          "comment": "Diese Kommentarfunktion ist der shit."
-        }
-      ]
+      "comments": []
     },
     {
       "articleName": "protein",
       "comments": [
         {
-          "username": "poschinski",
+          "username": "irgendjemand",
           "timestamp": "Sonntag, 12. März 2023, 13:13",
-          "comment": "asfasfasfasfasf"
+          "comment": "Das ist ein toller Artikel!"
         }
       ]
     },
@@ -30,30 +19,18 @@
       "comments": [
         {
           "username": "username",
-          "timestamp": "15.02.2023 16:53",
+          "timestamp": "Samstag, 11. März 2023, 16:22",
           "comment": "Dieser Artikel hat mein Leben verändert."
         }
       ]
     },
     {
       "articleName": "history",
-      "comments": [
-        {
-          "username": "username",
-          "timestamp": "15.02.2023 16:53",
-          "comment": "Dieser Artikel hat mein Leben verändert."
-        }
-      ]
+      "comments": []
     },
     {
       "articleName": "olympia",
-      "comments": [
-        {
-          "username": "username",
-          "timestamp": "15.02.2023 16:53",
-          "comment": "Dieser Artikel hat mein Leben verändert."
-        }
-      ]
+      "comments": []
     },
     {
       "articleName": "worldcup",
@@ -62,40 +39,28 @@
           "username": "tobias",
           "timestamp": "Montag, 13. März 2023, 08:26",
           "comment": "Sehr guter Artikel!"
-        },
-        {
-          "username": "username",
-          "timestamp": "15.02.2023 16:53",
-          "comment": "Dieser Artikel hat mein Leben verändert."
         }
       ]
     },
     {
       "articleName": "einfuehrung",
-      "comments": [
-        {
-          "username": "poschinski",
-          "timestamp": "Sonntag, 12. März 2023, 17:56",
-          "comment": "Helo"
-        }
-      ]
+      "comments": []
     },
     {
       "articleName": "klettergebiete",
-      "comments": [
-        {
-          "username": "username",
-          "timestamp": "15.02.2023 16:53",
-          "comment": "Dieser Artikel hat mein Leben verändert."
-        }
-      ]
+      "comments": []
     },
     {
       "articleName": "varianten",
       "comments": [
         {
+          "username": "irgendjemand",
+          "timestamp": "Sonntag, 12. März 2023, 13:13",
+          "comment": "Das ist ein toller Artikel!"
+        },
+        {
           "username": "username",
-          "timestamp": "15.02.2023 16:53",
+          "timestamp": "Samstag, 11. März 2023, 16:22",
           "comment": "Dieser Artikel hat mein Leben verändert."
         }
       ]
