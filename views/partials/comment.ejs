@@ -10,6 +10,7 @@
         title="Hinweis: Der Kommentar wird in Ihrem Namen angzeigt."
         maxlength="1000"
         id="commentInput"
+        minlength="10"
       ></textarea>
       <input type="hidden" name="url" id="urlInput">
       <div id="character-count">0/1000</div>
@@ -32,7 +33,6 @@
         <% } %>
       <% } %>
     <% } %>
-
   </div>
 </div>
 <script src="/js/comments.js"></script>
