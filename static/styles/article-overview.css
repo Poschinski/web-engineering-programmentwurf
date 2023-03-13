@@ -9,14 +9,7 @@ form h1 {
   color: white;
   margin-top: -20px;
 }
-.submit button {
-  background-color: transparent;
-  color: white;
-}
-.submit:hover button {
-  background-color: white;
-  color: black;
-}
+
 
 h1 {
   text-align: center;
@@ -36,35 +29,32 @@ h2 {
 .box1 {
   margin-right: 5px;
   background-color: white;
-  width: fit-content;
   text-align: center;
   position: flex;
-  height: fit-content;
+  height: auto;
   margin-left: 5px;
   width: 470px;
-  margin-top: 50px;
+ 
 }
 .box2 {
   margin-right: 5px;
   background-color: white;
-  width: fit-content;
   text-align: center;
   position: flex;
   height: fit-content;
   margin-left: 5px;
   width: 470px;
-  margin-top: 50px;
+  
 }
 .box3 {
   margin-right: 5px;
   background-color: white;
-  width: fit-content;
   text-align: center;
   position: flex;
   height: fit-content;
   margin-left: 5px;
   width: 470px;
-  margin-top: 50px;
+  
 }
 .box1,
 .box2,
@@ -72,3 +62,4 @@ h2 {
   border-style: groove;
   box-shadow: 2px 3px 2px -2px;
 }
+

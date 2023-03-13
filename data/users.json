@@ -13,6 +13,13 @@
       "surname": "Richter",
       "password": "$2b$10$fgTWUrAolANZeWvpaQcjreG9NeulXwyUbMiWrHgTNsTQcgyt8bJu2",
       "gender": "male"
+    },
+    {
+      "username": "tobias",
+      "givenname": "Tobias",
+      "surname": "Schilling",
+      "password": "$2b$10$maJFAI/vMbn8llCfCa9byuWzKcRjvItJngr92x9f.dIq.kJMn26ka",
+      "gender": "male"
     }
   ]
 }
