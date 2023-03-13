@@ -44,7 +44,7 @@ h1 {
     align-items: center;
     position: relative;
     bottom: 100px;
-    height: 40vh;
+    /* height: 40vh; */
 }
 
 img {
