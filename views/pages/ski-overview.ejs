@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Skifahren Übersicht</title>
-    <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/article-overview.css" />
-  </head>
-  <body>
-    <%- include('../partials/head'); %>
+    <link rel="stylesheet" type="text/css" href="/styles/partialsStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/article-overview.css"/>
+</head>
+<body>
+<%- include('../partials/head'); %>
+<div class="container">
     <h1>Skisport</h1>
-    <div class="bildcontainer">
-      <div class="box1">
-        <button href="/pages/skifahren/History">
-          <img src="/img/Skifahren.jpg" />
-        </button>
+    <div class="box1">
+        <a href="/skifahren/history">
+            <img src="/img/history.jpg"/>
+        </a>
         <h2>History</h2>
         <p>
-          In diesem Arikel können sie etwas über die Geschichte des Skisports
-          lernen. Dessen Ursprung, sowie die Entwicklung über viele Jahre des
-          Skisports.
+            In diesem Arikel können sie etwas über die Geschichte des Skisports
+            lernen. Dessen Ursprung, sowie die Entwicklung über viele Jahre des
+            Skisports.
         </p>
-      </div>
+    </div>
 
-      <div class="box2">
-        <button type="button" href="/skifahren/olympia">
-          <img src="/img/olympic.jpg" />
-        </button>
+    <div class="box2">
+        <a href="/skifahren/olympia">
+            <img src="/img/olympic.jpg"/>
+        </a>
         <h2>Olympia</h2>
         <p>
-          In diesem Artikel können sie sich über die olympischen Winterspiele
-          informieren und etwas über die deutschen Erfolge bei dieser erfahren.
+            In diesem Artikel können sie sich über die olympischen Winterspiele
+            informieren und etwas über die deutschen Erfolge bei dieser erfahren.
         </p>
-      </div>
+    </div>
 
-      <div class="box3">
-        <button type="button" href="/pages/skifahren/worldcup">
-          <img src="/img/WM.jpg" />
-        </button>
+    <div class="box3">
+        <a href="/skifahren/worldcup">
+            <img src="/img/SkiWM.jpg"/>
+        </a>
         <h2>Worldcup</h2>
         <p>
-          in diesem Artikel geht es um die deutschen Erfolge bei
-          Weltmeisterschaften, sowie die aktuellsten Informationen der
-          diesjährigen Weltmeisterschaft.
+            in diesem Artikel geht es um die deutschen Erfolge bei
+            Weltmeisterschaften, sowie die aktuellsten Informationen der
+            diesjährigen Weltmeisterschaft.
         </p>
-      </div>
     </div>
-    <footer><%- include('../partials/footer'); %></footer>
-  </body>
+</div>
+<footer><%- include('../partials/footer'); %></footer>
+</body>
 </html>

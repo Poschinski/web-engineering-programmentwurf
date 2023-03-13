@@ -47,6 +47,10 @@ router.get('/skifahren', (req, res) => {
     res.render("pages/ski-overview");
 })
 
+router.get('/bodybuilding/', (req, res) => {
+    res.render("pages/bodybuilding-overview");
+})
+
 /**
  * 
  * @param articleName - name of the article 
