@@ -64,7 +64,6 @@ app.post("/auth", encodeUrl, (req, res) => {
       if (result) {
         req.session.user = user;
         req.session.uuid = req.sessionID;
-        console.log(req.session);
         res.redirect("/");
       } else {
         alert("Falsches Passwort!")
@@ -86,7 +85,7 @@ app.post("/newUser", encodeUrl, (req, res) => {
   const gender = req.body.gender;
 
   // check if the user already exists
-  let user = findByUsername(username);
+  let user = users.find((user) => user.username === username);
   if (user) {
     alert("Benutzername bereits vergeben!");
     // check if the repeated password matches
@@ -153,16 +152,6 @@ app.get("/logout", (req, res) => {
     res.end();
   }
 });
-
-/**
- * 
- * @param username - username to search for
- * @returns the entire user object
- */
-function findByUsername(username) {
-  let user = users.find((user) => user.username === username);
-  return user;
-}
 
 /**
  * 
