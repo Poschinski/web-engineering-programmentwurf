@@ -1,6 +1,6 @@
 //Suchen der id="change-color-button"
 const changeColorButton = document.querySelector('#change-color-button');
-//Eveent hinzufügen(die Funktion wird erst ausgeführt, wenn der button geklickt wird)
+//Event hinzufügen(die Funktion wird erst ausgeführt, wenn der button geklickt wird)
 changeColorButton.addEventListener('click', function() {
   const islandCheckbox = document.querySelector('#island-checkbox');
   //mit der if-Funktion festlegen, wann eine checkbox beim submitten grün wird und wann sie rot wird
@@ -132,5 +132,30 @@ changeColorButton.addEventListener('click', function() {
     d2.nextElementSibling.style.backgroundColor = 'red';
   } else {
     d2.nextElementSibling.style.backgroundColor = '';
+  }
+  //Frage 7
+  const freiklettern = document.querySelector('#freiklettern');
+  if (freiklettern.checked) {
+    freiklettern.nextElementSibling.style.backgroundColor = 'green';
+  } else {
+    freiklettern.nextElementSibling.style.backgroundColor = '';
+  }
+  const bouldern = document.querySelector('#bouldern');
+  if (bouldern.checked) {
+    bouldern.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    bouldern.nextElementSibling.style.backgroundColor = '';
+  }
+  const sportklettern = document.querySelector('#sportklettern');
+  if (sportklettern.checked) {
+    sportklettern.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    sportklettern.nextElementSibling.style.backgroundColor = '';
+  }
+  const freesolo = document.querySelector('#freesolo');
+  if (freesolo.checked) {
+    freesolo.nextElementSibling.style.backgroundColor = 'red';
+  } else {
+    freesolo.nextElementSibling.style.backgroundColor = '';
   }
 });

@@ -115,7 +115,9 @@ input[type=checkbox]:checked+.checkmark {
 .Frage3,
 .Frage4,
 .Frage5,
-.Frage6{
+.Frage6,
+.Frage7
+{
     margin-left:50px;
    
 }
