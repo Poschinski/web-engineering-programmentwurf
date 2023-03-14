@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "username": "poschinski",
-      "givenname": "Marcus",
-      "surname": "Unglert",
-      "password": "$2b$10$N19LJoFctMD.LLjvdTG6U./xiGEKt4/7w9ng0PXxx..mqpYtTZJZ6",
-      "gender": "male"
-    },
-    {
       "username": "tobias",
       "givenname": "Tobias",
       "surname": "Schilling",
