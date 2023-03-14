@@ -1,0 +1,9 @@
+Installationsanleitung
+
+Voraussetzungen:
+- Nodejs sollte installierte sein (getestet mit Version 18.12.1)
+
+Installation:
+Folgende Befehle im Root-Verzeichnis ausführen:
+1. npm install
+2. npm run live
