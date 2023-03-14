@@ -23,8 +23,8 @@ h1 {
     padding-left: 35px;
     margin-bottom: 12px;
     font-size: 22px;
-   
-   
+
+
 }
 /* die vom Browser erstellte checkbox wird entfernt */
 .inputcontainer input {
@@ -90,7 +90,7 @@ input[type=checkbox]:checked+.checkmark {
     height: 50px;
     margin-left: 800px;
    z-index: 4;
-   
+
 
 }
 /* Farbe und Text des Buttons ändern sich beim hovern */
@@ -120,6 +120,26 @@ input[type=checkbox]:checked+.checkmark {
 {
     margin-top:10px;
     margin-left:50px;
-   
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* Changes for mobile devices */
+    .container {
+        padding: 20px;
+    }
+    #change-color-button {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .Frage1,
+    .Frage2,
+    .Frage3,
+    .Frage4,
+    .Frage5,
+    .Frage6,
+    .Frage7 {
+        margin-left: 20px;
+    }
 }
 
