@@ -138,11 +138,9 @@ article p {
     margin-top: 10px;
 }
 
-
 .images img:hover {
     transform: scale(1.1);
 }
-
 
 /*automatische anpassung bei kleinerem fenster*/
 @media only screen and (max-width: 768px) {
