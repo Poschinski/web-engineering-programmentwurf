@@ -4,9 +4,7 @@ body {
 
 /*style für überschriften im artikel*/
 .span1 {
-    font: bold;
     color: black;
-    text-decoration: underline;
     font-size: 1.0rem;
     line-height: 1.7;
 }
@@ -101,9 +99,7 @@ body {
 
 .subheading {
     margin: 8px 0px;
-    font: bold;
     color: black;
-    font-size: bold;
 }
 
 /*automatische anpassung bei kleinerem fenster*/
