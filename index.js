@@ -108,7 +108,7 @@ app.post("/newUser", encodeUrl, (req, res) => {
         };
         users.push(newUser);
         writeUsers(users);
-        res.redirect("/");
+        res.redirect("/login");
       });
     });
   }
