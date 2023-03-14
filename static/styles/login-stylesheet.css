@@ -17,7 +17,6 @@
 .slider {
     overflow: hidden;
     width: 100vw;
-    height: calc(100vh - 10vh);
     position: relative;
 }
 
@@ -130,8 +129,7 @@ button[type="button"]:hover {
 
 /*verhalten bei kleineren screens*/
 @media (max-width: 768px) {
-    .slider {
-        height: calc(100vh - 20vh);
-        margin-bottom: -20vh;
+    .login-container {
+        margin-top: 30px;
     }
 }

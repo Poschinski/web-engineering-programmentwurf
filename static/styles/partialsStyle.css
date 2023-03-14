@@ -219,12 +219,16 @@ nav input[type="checkbox"] {
         background: white;
         position: relative;
         padding: 0 27px;
-        left: 19px;
+        left: 6px;
     }
 
     .dropdown li a {
         position: relative;
         right: 10px;
+    }
+
+    .dropdown > li:nth-child(3) {
+        padding-right: 0px;
     }
 
     .dropdown > li:nth-child(3) > a:nth-child(1) {
