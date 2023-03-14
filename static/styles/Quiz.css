@@ -1,13 +1,15 @@
 body{
     background-color: #f2f2f2;
 }
+
 html {
     height: 100%;
 }
+
 span {
     color: red;
-
 }
+
 /* Seitenüberschrift */
 h1 {
     text-align: center;
@@ -23,15 +25,15 @@ h1 {
     padding-left: 35px;
     margin-bottom: 12px;
     font-size: 22px;
-
-
 }
+
 /* die vom Browser erstellte checkbox wird entfernt */
 .inputcontainer input {
     opacity: 0;
     height: 0;
     width: 0;
 }
+
 /* neue checkboxen werden erstellt */
 .checkmark {
     position: absolute;
@@ -47,18 +49,17 @@ h1 {
     background-color: #ccc;
 }
 
-/* Design der checkbox nach dem Anklicken */
+/* checkbox ist vor den Anklicken leer */
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-
+/* Design der checkbox nach dem Anklicken */
 .inputcontainer input:checked~.checkmark:after {
     display: block;
 }
-
 
 .inputcontainer .checkmark:after {
     left: 9px;
@@ -73,6 +74,7 @@ h1 {
 .inputcontainer {
     margin-left: 5%;
 }
+
 /* Hintergrundfarbe der checkmarks vor dem Drücken des Buttons */
 input[type=checkbox]:checked+.checkmark {
     background-color: grey;
@@ -90,14 +92,14 @@ input[type=checkbox]:checked+.checkmark {
     height: 50px;
     margin-left: 800px;
    z-index: 4;
-
-
 }
+
 /* Farbe und Text des Buttons ändern sich beim hovern */
 #change-color-button:hover {
     color: white;
     background-color: #6e529d;
 }
+
 /* Foramtierung der Seite (grauer Hintergrund, Inhalt mit weißem Hintergrund) */
 .container {
     display: flex;
@@ -110,14 +112,14 @@ input[type=checkbox]:checked+.checkmark {
     z-index: 1;
     border-radius: 5px;
 }
+
 .Frage1,
 .Frage2,
 .Frage3,
 .Frage4,
 .Frage5,
 .Frage6,
-.Frage7
-{
+.Frage7{
     margin-top:10px;
     margin-left:50px;
 

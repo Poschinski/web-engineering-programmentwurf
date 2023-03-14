@@ -15,7 +15,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     position: relative;
 }
-
+/* Überschrift */
 h1 {
     text-align: center;
     margin-top: 20px;
@@ -38,7 +38,7 @@ h1 {
 .box3 {
     grid-area: b3;
 }
-
+/* einzele Übersichtsboxen werden formatiert */
 .box1, .box2, .box3 {
     width: 300px;
     padding: 70px 30px 30px;
@@ -48,7 +48,7 @@ h1 {
     position: relative;
     bottom: 100px;
 }
-
+/* bilder in den Übersichtsboxen werden an diese angepasst */
 img {
     width: 270px;
     height: auto;
@@ -69,7 +69,7 @@ h2 {
 p {
     text-align: justify;
 }
-
+/* Verhalten beim kleiner werden der Seite */
 @media only screen and (max-width: 1300px) and (min-width: 1120px) {
     .box1, .box2, .box3 {
         margin: 10px;
