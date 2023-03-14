@@ -5,23 +5,26 @@ body {
 .container {
     display: grid;
     background-color: white;
-    padding: 40px;
+    padding: 220px 40px 0;
     margin: 5vh auto;
     z-index: 1;
     border-radius: 5px;
     grid-template-areas:
-    ".  h1 ."
+    ".  h1 . "
     "b1 b2 b3";
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    position: relative;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     font-size: 40px;
-    position: relative;
-    left: 36vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .box1 {
@@ -38,13 +41,12 @@ h1 {
 
 .box1, .box2, .box3 {
     width: 300px;
-    padding: 70px 30px 0;
-    margin: 0 50px;
+    padding: 70px 30px 30px;
+    margin: 20px 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-items: center;
     position: relative;
     bottom: 100px;
-    height: 40vh;
 }
 
 img {
@@ -83,18 +85,21 @@ p {
     "b3";
         grid-template-columns: 1fr;
         width: 90%;
+        padding-top: 0;
     }
 
     h1 {
         grid-area: h1;
-        margin-top: 0;
+        margin-top: 20px;
         margin-bottom: 20px;
         left: 0;
+        transform: none;
+        position: static;
     }
 
     .box1, .box2, .box3 {
         padding-bottom: 20px;
-        margin: 0 auto;
+        margin: 0 auto 10px;
         max-width: 100%;
         bottom: initial;
     }
