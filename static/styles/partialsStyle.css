@@ -232,7 +232,7 @@ nav input[type="checkbox"] {
     }
 
     .dropdown > li:nth-child(3) > a:nth-child(1) {
-        padding-left: 0px;
+        padding-left: 0;
     }
 
 

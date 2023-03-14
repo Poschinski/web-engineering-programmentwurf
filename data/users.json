@@ -13,6 +13,13 @@
       "surname": "Schilling",
       "password": "$2b$10$maJFAI/vMbn8llCfCa9byuWzKcRjvItJngr92x9f.dIq.kJMn26ka",
       "gender": "male"
+    },
+    {
+      "username": "juhu",
+      "givenname": "seervus",
+      "surname": "erdnuss",
+      "password": "$2b$10$QOdWK3SPKT4mqDVERyR3auKMSQPIUxR53IuEkJV3ruUubY9r672Q.",
+      "gender": "male"
     }
   ]
 }
