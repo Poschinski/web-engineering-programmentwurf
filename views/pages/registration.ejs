@@ -56,6 +56,8 @@
           <input
             type="password"
             placeholder="Passwort eingeben"
+            pattern="^(?=.*[0-9])(?=.*[!#,+\-_?])(?=.{8,})\S+$"
+            title="Passwort muss mindestens einen Großbuchstaben, einen Kleinbuchstaben, eine Ziffer, eins der folgenden Symbole !#,+-_? und eine länge zwischen 8 und 20 Symbolen haben."
             name="password"
             maxlength="20"
             required
